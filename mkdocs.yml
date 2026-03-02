@@ -1,4 +1,4 @@
-site_name: "ZJU AI Student | 科研笔记"
+site_name: "misaka's note"
 theme:
   name: material
   language: zh
@@ -18,6 +18,7 @@ markdown_extensions:
 
 # 这里的导航栏会自动对应你的 md 文件
 nav:
-  - 🏠 主页: index.md
-  - 🔬 科研笔记: 
-    - 第一篇论文复现: research/first-paper.md
+  - Home page: index.md
+  - Research notes: 
+    - mof-bfn: 
+      - Overview: research/first-paper.md
