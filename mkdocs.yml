@@ -1,0 +1,23 @@
+site_name: "ZJU AI Student | 科研笔记"
+theme:
+  name: material
+  language: zh
+  palette:
+    primary: indigo  # 浙大蓝调
+    accent: indigo
+  features:
+    - navigation.tabs
+    - content.code.copy
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences:
+
+# 这里的导航栏会自动对应你的 md 文件
+nav:
+  - 🏠 主页: index.md
+  - 🔬 科研笔记: 
+    - 第一篇论文复现: research/first-paper.md
