@@ -1,4 +1,4 @@
-## 判断lattice_loss主导项
+## 1. 判断lattice_loss主导项
 
 * 在 loss_one_step 里，lattice_loss 实际上是两块相加：
 
@@ -20,15 +20,15 @@ CUDA_VISIBLE_DEVICES=3,4 python experiments/train.py \
 
 ### vol_loss_weight = 0的情况
 
-![image-20260303103555400](C:/Users/23022/AppData/Roaming/Typora/typora-user-images/image-20260303103555400.png)
+![image-20260303103555400](./assets/image-20260303103555400.png)
 
-### 原本情况
+### 论文原本情况
 
-![image-20260302114934978](https://lemyuemingxingxi.github.io/misakas_web/assets/image-20260302114934978.png)
+![image-20260302114934978](./assets/image-20260302114934978.png)
 
 * ==对比看出loss显著下降，因此vol_loss是主导项== 
 
-## 检查训练集里的 gt_vol 分布
+## 2. 检查训练集里的 gt_vol 分布
 
 ```python
 python - <<'PY'
@@ -93,9 +93,9 @@ except Exception as e:
 PY
 ```
 
-![image-20260303104401118](C:/Users/23022/AppData/Roaming/Typora/typora-user-images/image-20260303104401118.png)
+![image-20260303104401118](./assets/image-20260303104401118.png)
 
-![image-20260303105125221](C:/Users/23022/AppData/Roaming/Typora/typora-user-images/image-20260303105125221.png)
+![image-20260303105125221](./assets/image-20260303105125221.png)
 
 - 绝大多数训练样本的体积在 \(10^3\) ～ 几 \(10^4\)，这是模型应该重点拟合的主区间。
 
@@ -103,7 +103,7 @@ PY
 
 
 
-### 检查验证集里的 gt_vol 分布
+### 检查生成晶体的 gt_vol 分布
 
 ```python
 /home/liem/.local/share/mamba/envs/mof-bfn/bin/python - <<'PY'
@@ -167,7 +167,7 @@ PY
 
 - log10(V) p1/p50/p99 = 2.859 / 3.416 / 4.409
 
-![image-20260303110227280](C:/Users/23022/AppData/Roaming/Typora/typora-user-images/image-20260303110227280.png)
+![image-20260303110227280](./assets/image-20260303110227280.png)
 
 ### 对比结果
 
@@ -177,19 +177,21 @@ PY
 
 
 
-## 尝试改进:
+## 3.尝试改进
 
-* #### 换成 log-volume / 相对误差，而不是直接 (V~pred~−V~gt~)^2^
+### 改进思路
 
-  当前：
+* 换成 log-volume / 相对误差，而不是直接 (V~pred~−V~gt~)^2^
 
-  - 用的是 绝对体积的 L2，大体积样本（上万、十万）一旦差一点，惩罚就爆炸。
+当前：
 
-  可以改为在 log 空间做约束，例如：
+- 用的是 绝对体积的 L2，大体积样本（上万、十万）一旦差一点，惩罚就爆炸。
 
-  - 用 (log⁡V~pred~−log⁡V~gt~)^2^
+可以改为在 log 空间做约束，例如：
 
-  
+- 用 (log⁡V~pred~−log⁡V~gt~)^2^
+
+
 
 改进代码：/home/liem/MOF-BFN/models/crysbfn_bhm.py中的loss_one_step
 
@@ -281,7 +283,7 @@ PY
             pass
 ```
 
-小样本测试：
+### 小样本测试
 
 ```
 PYTHONPATH=. LD_LIBRARY_PATH=/home/liem/.local/share/mamba/envs/mof-bfn/lib:$LD_LIBRARY_PATH \
@@ -297,7 +299,7 @@ CUDA_VISIBLE_DEVICES=3,4 python experiments/train.py \
 
 
 
-![image-20260303125837399](C:/Users/23022/AppData/Roaming/Typora/typora-user-images/image-20260303125837399.png)
+![image-20260303125837399](./assets/image-20260303125837399.png)
 
 由图片可以看出，这次的loss都明显下降，并且收敛了。
 
@@ -331,7 +333,7 @@ python -m evaluation.connect_check \
   --max_process 16
 ```
 
-![image-20260303131549732](C:/Users/23022/AppData/Roaming/Typora/typora-user-images/image-20260303131549732.png)
+![image-20260303131549732](./assets/image-20260303131549732.png)
 
 ![image-20260303132018370](./assets/image-20260303132018370.png)
 

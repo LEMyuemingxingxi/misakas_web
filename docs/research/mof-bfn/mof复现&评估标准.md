@@ -1,8 +1,8 @@
 ## De Novo测评
 
-![image-20260126102942221](C:\Users\23022\AppData\Roaming\Typora\typora-user-images\image-20260126102942221.png)
+![image-20260126102942221](./assets/image-20260126102942221.png)
 
-![image-20260205154835724](C:\Users\23022\AppData\Roaming\Typora\typora-user-images\image-20260205154835724.png)
+![image-20260205154835724](./assets/image-20260205154835724.png)
 
 | Validity Criteria                      | 论文 MOF-BFN | 你的实验结果 | 差值（你 - 论文） |
 | -------------------------------------- | ------------ | ------------ | ----------------- |
