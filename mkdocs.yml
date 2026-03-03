@@ -43,10 +43,10 @@ markdown_extensions:
   - pymdownx.tabbed:      # 选项卡切换卡片
       alternate_style: true
 
+
 # 这里的导航栏会自动对应你的 md 文件
 nav:
   - Home page: index.md
-  - Class Notes:
   - Research notes: 
     - mof-bfn: 
       - mof reproduction: research/mof-bfn/mof复现&评估标准.md
