@@ -10,11 +10,38 @@ theme:
     - content.code.copy
 
 markdown_extensions:
-  - pymdownx.arithmatex:
+  # 基础扩展
+  - abbr
+  - admonition        # 警告/提示块 (!!! info "标题")
+  - attr_list         # 允许在 Markdown 中写 CSS 类名
+  - def_list
+  - footnotes         # 脚注 [^1]
+  - meta
+  - md_in_html
+  - toc:              # 自动生成右侧目录
+      permalink: true
+
+  # PyMdown 增强扩展 (Typora 用户最需要的)
+  - pymdownx.arithmatex: # 数学公式 LaTeX
       generic: true
-  - pymdownx.highlight:
+  - pymdownx.betterem:   # 改进的斜体/加粗识别
+  - pymdownx.caret:      # 上标 x^2^ (Typora 常用)
+  - pymdownx.mark:       # ==高亮==
+  - pymdownx.tilde:      # ~~删除线~~ 和 下标 H~2~O
+  - pymdownx.critic:     # 批注语法
+  - pymdownx.details:    # 折叠块 (??? note "点击展开")
+  - pymdownx.highlight:  # 代码高亮
       anchor_linenums: true
-  - pymdownx.superfences:
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite: # 行内代码高亮 `#!python var = 1`
+  - pymdownx.snippets:    # 允许一个 md 嵌套另一个 md
+  - pymdownx.superfences: # 嵌套代码块 (比如在列表里写代码)
+  - pymdownx.tasklist:    # 任务列表 [x] [ ]
+      custom_checkbox: true
+  - pymdownx.smartsymbols: # 智能符号 (如 (c) 变成 ©)
+  - pymdownx.tabbed:      # 选项卡切换卡片
+      alternate_style: true
 
 # 这里的导航栏会自动对应你的 md 文件
 nav:
