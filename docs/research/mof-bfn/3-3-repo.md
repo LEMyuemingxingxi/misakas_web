@@ -364,3 +364,8 @@ python experiments/train.py \
     +model.vol_min_scale=0.85
 ```
 
+> [!CAUTION]
+>
+> <img src="./assets/image-20260303141520299.png" alt="image-20260303141520299" style="zoom:50%;" />
+>
+> 对于这种“高峰”，我猜测是因为遇到了数据集中太大或太小的个别数据了，这个该如何应对呢？
