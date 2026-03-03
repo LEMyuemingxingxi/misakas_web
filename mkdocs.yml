@@ -21,4 +21,5 @@ nav:
   - Home page: index.md
   - Research notes: 
     - mof-bfn: 
-      - Overview: research/first-paper.md
+      - Overview: research/mof-bfn/first-paper.md
+      - 3-2-repo: research/mof-bfn/3-2-repo.md
