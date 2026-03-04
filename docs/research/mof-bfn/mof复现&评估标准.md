@@ -132,7 +132,7 @@
 
         $$U_{d} = \frac{1}{N} \sum_{i=1}^{N} \exp\left(-\sum_{j \neq i} K(d(x_i, x_j))\right)$$
 
-        ![image-20260207100727141](C:\Users\23022\AppData\Roaming\Typora\typora-user-images\image-20260207100727141.png)
+        ![image-20260207100727141](./assets/image-20260207100727141.png)
 
       - **分析**：它不再是简单的计数，而是考察样本在空间中的分布。如果大量样本堆在一起（距离很近），得分会迅速下降。这能有效识别出那些“换汤不换药”的生成结果。
 
@@ -146,7 +146,7 @@
 
         $$d_{min} = \min_{x_t \in X_{train}} d(x_g, x_t)$$
 
-        ![image-20260207100715121](C:\Users\23022\AppData\Roaming\Typora\typora-user-images\image-20260207100715121.png)
+        ![image-20260207100715121](./assets/image-20260207100715121.png)
 
       - **分析**：通过设置一个连续的核函数，该指标能量化“创新的程度”。如果 AI 生成了一个和已知材料结构相似但元素不同的晶体，新指标能捕捉到这种“微创新”，而不是直接给 0 分或 1 分。
 

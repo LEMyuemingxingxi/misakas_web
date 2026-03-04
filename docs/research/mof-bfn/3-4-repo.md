@@ -234,4 +234,54 @@ Q1：有没有可能是因为训练轮数不够多？因为论文给的ckpt是�
 
 * 在log空间做val loss还是很保守，本质上还是MSE loss的问题，换成log-normal
 
-  
+
+
+### 小样本测验1
+
+* 将MSE loss换成log-normal
+
+<img src="./assets/image-20260304143619069.png" alt="image-20260304143619069" style="zoom:100%;" />
+
+* 结果： type 尖刺严重
+
+### 小样本测验2
+
+* type 头单独 LR（降 30–50%），在同一小样本设置下再跑 50–100 epoch，看 type 尖刺和 validity/overcoordinated/lone molecule 是否改善
+
+```python
+def configure_optimizers(self):
+        # type 头单独 LR（降 30–50%）以减轻 type loss 尖刺，其余参数用 base lr
+        opt_cfg = dict(omegaconf.OmegaConf.to_container(self._exp_cfg.optimizer, resolve=True))
+        type_lr_scale = opt_cfg.pop('type_lr_scale', 0.6)
+        base_lr = opt_cfg.get('lr', 1e-4)
+```
+
+![image-20260304152100108](./assets/image-20260304152100108.png)
+
+* 结果：我修改了type loss的lr，但是得出的结果（紫线）和上一次（绿线）基本重叠在一起
+
+* 微调效果不加，我就准备用测验2的配置直接正式训练
+
+### 正式训练
+
+```
+cd ~/MOF-BFN
+mkdir -p logs
+
+PYTHONPATH=. \
+LD_LIBRARY_PATH=/home/liem/.local/share/mamba/envs/mof-bfn/lib:$LD_LIBRARY_PATH \
+CUDA_VISIBLE_DEVICES=3,4 \
+nohup python experiments/train.py \
+  --config-dir configs \
+  --config-name bfn_base_bhm_cond \
+  experiment.num_devices=2 \
+  experiment.wandb.project=mof-csp-exp2 \
+  experiment.trainer.strategy=ddp \
+  experiment.trainer.gradient_clip_val=0.5 \
+  experiment.trainer.max_epochs=1000 \
+  > logs/second_exp_full.log 2>&1 &
+```
+
+![image-20260304213237012](./assets/image-20260304213237012.png)
+
+目前感觉情况不容乐观，怎么跑出了U型曲线？？？先再跑几个小时，静观其变吧。
