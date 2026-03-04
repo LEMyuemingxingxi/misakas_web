@@ -1088,7 +1088,7 @@ std::array<std::string, 5> arr;
 >       T& at(size_t index);
 >       void push_back(const T& elem);
 >   };
->                                               
+>                                                 
 >   ```
 >
 >   ![image-20260123192306961](./assets/image-20260123192306961.png)
@@ -1668,7 +1668,7 @@ public:
 >
 > ![image-20260127093926354](./assets/image-20260127093926354.png)
 >
-> ![image-20260127093913736](C:\Users\23022\AppData\Roaming\Typora\typora-user-images\image-20260127093913736.png)
+> ![image-20260127093913736](./assets/image-20260127093913736.png)
 
 ### delete
 
@@ -1913,7 +1913,7 @@ void safeFunction() {
 
 ![image-20260127193203286](./assets/image-20260127193203286.png)
 
-<img src="./assets/image-20260127193502135.png" alt="image-20260127193502135" style="zoom:200%;" />
+![image-20260127193502135](./assets/image-20260127193502135.png)
 
 ### Building C++ projects
 
