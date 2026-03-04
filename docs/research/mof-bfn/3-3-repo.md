@@ -323,12 +323,12 @@ python -m evaluation.connect_check \
   --res_path /home/liem/MOF-BFN/infer_results_test_3_3_01/raw_results.pt \
   --bb_z_path /home/liem/data/mofbfn/datasets/dng/bb_emb_space_tot_z.pt \
   --bb_blocks_path /home/liem/data/mofbfn/datasets/dng/bb_emb_space_tot_blocks_processed.lmdb \
-  --max_process 16
+  --max_process 100
   
   #有效性检查 (Validity Check)
   python -m evaluation.validity_check \
   --res_path /home/liem/MOF-BFN/infer_results_test_3_3_01/samples \
-  --max_process 16
+  --max_process 100
 ```
 
 ![image-20260303131549732](./assets/image-20260303131549732.png)

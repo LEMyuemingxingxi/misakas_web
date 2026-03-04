@@ -47,9 +47,13 @@ markdown_extensions:
 # 这里的导航栏会自动对应你的 md 文件
 nav:
   - Home page: index.md
+  - Lecture notes:
+    - OOP:
+      - "Lecture 1: C++ Basics" : Lecture notes/oop/lecture1.md
   - Research notes: 
     - mof-bfn: 
       - mof reproduction: research/mof-bfn/mof复现&评估标准.md
       - Validity Check: research/mof-bfn/Validity Check.md
       - 3-2-repo: research/mof-bfn/3-2-repo.md
       - 3-3-repo: research/mof-bfn/3-3-repo.md
+      - 3-4-repo: research/mof-bfn/3-4-repo.md
