@@ -48,7 +48,9 @@ markdown_extensions:
 nav:
   - Home page: index.md
   - Lecture notes:
+    - CS106L: Lecture notes/CS106L/note.md
     - OOP:
+      - "Lecture 0: Introduction" : Lecture notes/oop/lecture0.md
       - "Lecture 1: C++ Basics" : Lecture notes/oop/lecture1.md
   - Research notes: 
     - mof-bfn: 
