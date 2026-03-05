@@ -239,8 +239,7 @@ Q1：有没有可能是因为训练轮数不够多？因为论文给的ckpt是�
 ### 小样本测验1
 
 * 将MSE loss换成log-normal
-
-<img src="./assets/image-20260304143619069.png" alt="image-20260304143619069" style="zoom:100%;" />
+* ![image-20260304143619069](./assets/image-20260304143619069.png)
 
 * 结果： type 尖刺严重
 
@@ -285,3 +284,6 @@ nohup python experiments/train.py \
 ![image-20260304213237012](./assets/image-20260304213237012.png)
 
 目前感觉情况不容乐观，怎么跑出了U型曲线？？？先再跑几个小时，静观其变吧。
+
+
+
