@@ -2,7 +2,7 @@
 
 * 去除数据中的过剩字符串
 
-![image-20260306192611573](C:\Users\23022\AppData\Roaming\Typora\typora-user-images\image-20260306192611573.png)
+![image-20260306192611573](./assets/image-20260306192611573.png)
 
 * 开始训练
 

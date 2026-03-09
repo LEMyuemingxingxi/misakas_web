@@ -63,5 +63,6 @@ nav:
       - 3-6-repo: research/mof-bfn/3-6-repo.md
       - 3-7-repo: research/mof-bfn/3-7-repo.md
       - 3-8-repo: research/mof-bfn/3-8-repo.md
+      - 3-9-repo: research/mof-bfn/MOFBFN笔记.md
   - Kaggle:
       - Titanic: kaggle/泰坦尼克号竞赛思路及9种预测模型的代码详解.md
