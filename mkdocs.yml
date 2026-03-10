@@ -52,6 +52,9 @@ nav:
     - OOP:
       - "Lecture 0: Introduction" : Lecture notes/oop/lecture0.md
       - "Lecture 1: C++ Basics" : Lecture notes/oop/lecture1.md
+    - 人工智能逻辑:
+      - 课程概要：Lecture notes/人工智能逻辑/course_overview.md
+      - 第一章：推理与论证 : Lecture notes/人工智能逻辑/chapter1.md
   - Research notes: 
     - mof-bfn: 
       - mof reproduction: research/mof-bfn/mof复现&评估标准.md
