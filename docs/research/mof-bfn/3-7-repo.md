@@ -10,11 +10,11 @@
 cd /home/liem/MOF-BFN
 export PYTHONPATH=.
 export LD_LIBRARY_PATH="${HOME}/.local/share/mamba/envs/mof-bfn/lib:${LD_LIBRARY_PATH}"
-export CUDA_VISIBLE_DEVICES=3,4
+export CUDA_VISIBLE_DEVICES=3,4,5,6
 mkdir -p logs
 
 nohup python experiments/train.py \
-    experiment.num_devices=2 \
+    experiment.num_devices=4 \
     experiment.wandb.name=dng_from_scratch \
     experiment.trainer.strategy=ddp \
     > logs/dng_from_scratch.log 2>&1 &

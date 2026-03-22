@@ -60,6 +60,7 @@ nav:
     - 人工智能逻辑:
       - 课程概要 : Lecture notes/人工智能逻辑/course_overview.md
       - 第一章：推理与论证 : Lecture notes/人工智能逻辑/chapter1.md
+      - 第二章 预备知识: Lecture notes/人工智能逻辑/chapter2.md
   - Research notes: 
     - mof-bfn: 
       - mof reproduction: research/mof-bfn/mof复现&评估标准.md
@@ -73,7 +74,16 @@ nav:
       - 3-8-repo: research/mof-bfn/3-8-repo.md
       - 3-9-repo: research/mof-bfn/MOFBFN笔记.md
       - 3-10-repo: research/mof-bfn/3-10-repo.md
-      - 3-11-repo: research/mof-bfn/3-11-repo.md
+      - 3-11-repo: research/mof-bfn/3-11-repo-bfn.md
+      - 3-12-repo: research/mof-bfn/3-12-repo-bfn.md
+      - 3-15-repo: research/mof-bfn/3-15-repo-bfn.md
+      - 3-16-repo: research/mof-bfn/3-16-repo-bfn.md
+      - 3-19-repo: research/mof-bfn/3-19-repo-bfn.md
+      - 3-22-repo: research/mof-bfn/3-22-repo-bfn.md
+    - atommof:
+      - ATOMMOF notes: research/atommof/ATOMMOF notes.md
+      - 3-11-repo: research/atommof/3-11-repo-atommof.md
+      - 3-12-repo: research/atommof/3-12-repo-atommof.md
   - Kaggle:
       - Titanic: kaggle/泰坦尼克号竞赛思路及9种预测模型的代码详解.md
 

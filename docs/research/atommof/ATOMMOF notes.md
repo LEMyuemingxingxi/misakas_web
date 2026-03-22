@@ -1,3 +1,5 @@
+# ATOMMOF:All-Atom Flow Matching for MOF-Adsorbate Structure Prediction
+
 ### 1. 研究背景与核心挑战 (Background & Challenges)
 
 - **MOF 的复杂性与重要性**：MOFs 是具有极高孔隙率和可调性的晶体材料，在碳捕获（如直接空气捕获 DAC）、气体分离和催化领域具有重要应用 。其复杂的 host-guest（主机-客体）相互作用是决定其性能的关键 。
@@ -51,41 +53,42 @@ ATOMMOF 引入了全原子流匹配框架，并提出了以下关键创新：
 
   
 
-
 #### 3.2 变分流匹配 (Variational Flow Matching, VFM)
 
-ATOMMOF 采用 VFM 框架进行训练，利用 $L^1$ 目标函数提升收敛性 ：
+模型采用了 **Variational Flow Matching (VFM)**。,可以将其理解为一种比传统扩散模型（Diffusion Models）更高效、收敛更快的生成方式。
 
-- **概率路径**：使用线性插值路径 $z_t = (1-t)z_0 + t z_1$，其中 $z_0$ 为先验分布（高斯/对数正态），$z_1$ 为真实数据 。
+- **训练逻辑：** 1.  **加噪（Forward）：** 将真实的 MOF 结构（$z_1$）与纯噪声（$z_0$）进行线性插值，得到不同时间点 $t$ 的模糊结构 $z_t$。
+  2. **去噪（Backward）：** 训练一个神经网络 $\mu_\theta$，让它在看到模糊的 $z_t$ 时，能“猜”出原始干净的结构 $z_1$ 是什么样。
+- **目标函数：** 采用 $L1$ 损失函数，直接计算预测坐标/晶格与真实值之间的绝对误差。这种方式比传统的得分匹配（Score matching）更稳定。
 
-
-- **训练目标**：通过预测“干净”数据来训练神经网络 $\mu_t^\theta$ ： 
-  $$
-  \mathcal{L}(\theta) = \mathbb{E}[\lambda_{coord}||\hat{X}_1 - X_1||_1 + \lambda_{lattice}||\hat{l}_1 - l_1||_1]
-  $$
-  
+$$
+\mathcal{L}(\theta) = \mathbb{E}[\lambda_{coord}||\hat{X}_1 - X_1||_1 + \lambda_{lattice}||\hat{l}_1 - l_1||_1]
+$$
 
 #### 3.3 Feynman-Kac 引导技术
 
-为了在不牺牲生成速度的情况下引入物理先验，模型在推理阶段将 ODE 转换为 SDE，并利用 MLIP 计算出的能量梯度来调整采样方向，使样本向低能量（物理上更稳定）的区域漂移 。
+即使模型预测得很好，物理上可能仍存在不合理的地方（如原子重叠）。
+
+* **MLIP（机器学习种间势能）：** 引入一个能计算能量的模型。
+* **Feynman-Kac Steering：** 在采样（生成）过程中，利用 MLIP 计算的能量作为指引。如果某个生成的结构能量极高（不稳定），引导机制会通过类似“粒子重采样”的方式，将生成过程推向能量更低、物理上更稳定的状态。
+* **公式体现：** $p_{target} \propto p_\theta \exp(-\lambda E(S))$。这意味着模型倾向于生成那些符合 AI 预测规律且物理能量（$E$）较低的结构。
 
 ------
 
-### 4. ATOMMOF 实现细节
+### 4. 模型架构：Diffusion Transformer (DiT)
 
-- **模型骨干 (Backbone)**：采用 **扩散变换器 (Diffusion Transformer, DiT)** 架构 。
-
-  - **编码器**：从建筑块 B 中提取原子特征，并利用 RDKit 生成的局部参考坐标 $X_{local}$ 来初始化单原子和对特征 。
-
-  - **Trunk**：通过深层 DiT 块建模原子间的长程相互作用，并将单原子上下文注入注意力偏置 。
-
-  - **解码器**：包含两个并行头，分别输出去噪后的坐标 $\hat{X}_1$ 和晶格参数 $\hat{l}_1$ 。
-
-    
+1. **编码器 (Encoder)：**
+   - 利用 RDKit 生成局部参考坐标。
+   - 将原子类型、电荷、化学键类型编码为特征。
+   - 初始化**点特征（Atom features）和边特征（Pairwise bias）**。
+2. **主干网络 (Trunk)：**
+   - 由多层 Transformer 块组成。
+   - **关键设计：** 它使用“结构注意力偏差”（Structural Attention Bias）。不仅考虑原子之间的距离，还不断将单原子信息注入到两两对（Pairwise）的关系中，从而捕捉深层的空间拓扑。
+3. **解码器 (Decoder)：**
+   - **坐标头：** 预测每个原子的 $X, Y, Z$ 偏移。
+   - **晶格头：** 通过全局平均池化（Global Average Pooling）将所有原子信息汇总，预测出 6 个晶格参数。
 
 - **三阶段课程学习 (Curriculum Learning)**：训练过程按体系大小（原子数）从小到大分阶段进行，以处理 MOF 极其庞大的搜索空间 。
-
-  
 
 - **模型规模**：提供了 S (38M), M (129M), L (491M) 三种尺寸的模型 
 
