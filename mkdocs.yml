@@ -43,11 +43,11 @@ markdown_extensions:
   - pymdownx.tabbed:      # 选项卡切换卡片
       alternate_style: true
 
-# 数学公式渲染 (Arithmatex 需要配合下方 JS 才能把 \( \) 和 \[ \] 渲染成公式)
+# 数学公式：须先加载配置脚本（设置 processHtmlClass: arithmatex），再加载 MathJax 主文件
+# 说明见 https://squidfunk.github.io/mkdocs-material/reference/math/
 extra_javascript:
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - javascripts/mathjax.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  - https://cdn.jsdelivr.net/gh/Arithmatex/mathjax-arithmatex-extension@latest/arithmatex.min.js
 
 # 这里的导航栏会自动对应你的 md 文件
 nav:
