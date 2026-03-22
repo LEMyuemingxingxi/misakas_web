@@ -1,0 +1,2150 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../../Lecture%20notes/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E9%80%BB%E8%BE%91/chapter2/">
+      
+      
+        <link rel="next" href="../Validity%20Check/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>mof reproduction - misaka's note</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#de-novo" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="misaka&#39;s note" class="md-header__button md-logo" aria-label="misaka's note" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            misaka's note
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              mof reproduction
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home page
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Lecture%20notes/CS106L/note/" class="md-tabs__link">
+          
+  
+  
+  Lecture notes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Research notes
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../kaggle/%E6%B3%B0%E5%9D%A6%E5%B0%BC%E5%85%8B%E5%8F%B7%E7%AB%9E%E8%B5%9B%E6%80%9D%E8%B7%AF%E5%8F%8A9%E7%A7%8D%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B%E7%9A%84%E4%BB%A3%E7%A0%81%E8%AF%A6%E8%A7%A3/" class="md-tabs__link">
+          
+  
+  
+  Kaggle
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="misaka&#39;s note" class="md-nav__button md-logo" aria-label="misaka's note" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    misaka's note
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home page
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lecture notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Lecture%20notes/CS106L/note/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CS106L
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OOP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    OOP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Lecture%20notes/oop/lecture0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 0: Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Lecture%20notes/oop/lecture1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 1: C++ Basics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    人工智能逻辑
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    人工智能逻辑
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Lecture%20notes/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E9%80%BB%E8%BE%91/course_overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程概要
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Lecture%20notes/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E9%80%BB%E8%BE%91/chapter1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章：推理与论证
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Lecture%20notes/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E9%80%BB%E8%BE%91/chapter2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章 预备知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Research notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    mof-bfn
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    mof-bfn
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    mof reproduction
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    mof reproduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#de-novo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        De Novo测评
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        通用评价指标
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        实验可合成性
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="实验可合成性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        产品有效性与合成难易度
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="产品有效性与合成难易度">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-uniqueness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 唯一性 (Uniqueness)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-novelty" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 新颖性 (Novelty)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 距离函数的选择
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 评估标准的四大特征
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Validity%20Check/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Validity Check
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-2-repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-2-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-3-repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-3-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-4-repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-4-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-5-repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-5-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-6-repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-6-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-7-repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-7-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-8-repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-8-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MOFBFN%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-9-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-10-repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-10-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-11-repo-bfn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-11-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-12-repo-bfn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-12-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-15-repo-bfn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-15-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-16-repo-bfn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-16-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-19-repo-bfn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-19-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-22-repo-bfn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-22-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    atommof
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    atommof
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atommof/ATOMMOF%20notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ATOMMOF notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atommof/3-11-repo-atommof/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-11-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atommof/3-12-repo-atommof/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-12-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kaggle
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Kaggle
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../kaggle/%E6%B3%B0%E5%9D%A6%E5%B0%BC%E5%85%8B%E5%8F%B7%E7%AB%9E%E8%B5%9B%E6%80%9D%E8%B7%AF%E5%8F%8A9%E7%A7%8D%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B%E7%9A%84%E4%BB%A3%E7%A0%81%E8%AF%A6%E8%A7%A3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Titanic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#de-novo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        De Novo测评
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        通用评价指标
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        实验可合成性
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="实验可合成性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        产品有效性与合成难易度
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="产品有效性与合成难易度">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-uniqueness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 唯一性 (Uniqueness)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-novelty" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 新颖性 (Novelty)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 距离函数的选择
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 评估标准的四大特征
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>mof reproduction</h1>
+
+<h2 id="de-novo">De Novo测评<a class="headerlink" href="#de-novo" title="Permanent link">&para;</a></h2>
+<p><img alt="image-20260126102942221" src="../assets/image-20260126102942221-1772518690511-9.png" /></p>
+<p><img alt="image-20260205154835724" src="../assets/image-20260205154835724-1772518695093-11.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Validity Criteria</th>
+<th>论文 MOF-BFN</th>
+<th>你的实验结果</th>
+<th>差值（你 - 论文）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Connection Point Matching</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>matched ↑</td>
+<td><strong>0.923</strong></td>
+<td><em>未给出</em></td>
+<td>–</td>
+</tr>
+<tr>
+<td><strong>MOFChecker</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>has_carbon ↑</td>
+<td><strong>1.000</strong></td>
+<td><strong>1.000</strong></td>
+<td>+0.000</td>
+</tr>
+<tr>
+<td>has_hydrogen ↑</td>
+<td>0.975</td>
+<td><strong>0.974</strong></td>
+<td>-0.001</td>
+</tr>
+<tr>
+<td>has_atomic_overlaps ↓</td>
+<td><strong>0.115</strong></td>
+<td>0.153</td>
+<td>+0.038</td>
+</tr>
+<tr>
+<td>has_overcoordinated_c ↓</td>
+<td><strong>0.193</strong></td>
+<td>0.221</td>
+<td>+0.028</td>
+</tr>
+<tr>
+<td>has_overcoordinated_n ↓</td>
+<td>0.049</td>
+<td><strong>0.054</strong></td>
+<td>+0.005</td>
+</tr>
+<tr>
+<td>has_overcoordinated_h ↓</td>
+<td><strong>0.180</strong></td>
+<td>0.209</td>
+<td>+0.029</td>
+</tr>
+<tr>
+<td>has_undercoordinated_c ↓</td>
+<td>0.182</td>
+<td><strong>0.174</strong></td>
+<td>-0.008</td>
+</tr>
+<tr>
+<td>has_undercoordinated_n ↓</td>
+<td><strong>0.154</strong></td>
+<td>0.155</td>
+<td>+0.001</td>
+</tr>
+<tr>
+<td>has_undercoordinated_rare_earth ↓</td>
+<td><strong>0.000</strong></td>
+<td><strong>0.000</strong></td>
+<td>+0.000</td>
+</tr>
+<tr>
+<td>has_metal ↑</td>
+<td><strong>1.000</strong></td>
+<td><strong>1.000</strong></td>
+<td>+0.000</td>
+</tr>
+<tr>
+<td>has_lone_molecule ↓</td>
+<td>0.186</td>
+<td><strong>0.182</strong></td>
+<td>-0.004</td>
+</tr>
+<tr>
+<td>has_high_charges ↓</td>
+<td><strong>0.069</strong></td>
+<td>0.070</td>
+<td>+0.001</td>
+</tr>
+<tr>
+<td>has_suspicious_terminal_oxo ↓</td>
+<td><strong>0.000</strong></td>
+<td><strong>0.000</strong></td>
+<td>+0.000</td>
+</tr>
+<tr>
+<td>has_undercoordinated_alkali_alkaline ↓</td>
+<td>0.027</td>
+<td><strong>0.029</strong></td>
+<td>+0.002</td>
+</tr>
+<tr>
+<td>has_geometrically_exposed_metal ↓</td>
+<td>0.304</td>
+<td><strong>0.351</strong></td>
+<td>+0.047</td>
+</tr>
+<tr>
+<td><strong>all_checks ↑</strong></td>
+<td><strong>0.350</strong></td>
+<td>0.341</td>
+<td>-0.009</td>
+</tr>
+</tbody>
+</table>
+<p>实验结果符合论文的结果。</p>
+<h2 id="_1">通用评价指标<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>MOFDIFF: COARSE-GRAINED DIFFUSION FOR METAL ORGANIC FRAMEWORK DESIGN</li>
+<li><strong>VNU（Valid, Novel, Unique）</strong> 评价体系</li>
+<li><strong>Valid：</strong><ol>
+<li><strong>连接匹配（Matched Connection）：</strong> 金属连接点和非金属连接点的数量必须相等、。</li>
+<li><strong>力场弛豫（Relaxation）：</strong> 原子结构必须能在力场下“收敛”，证明它在物理上是稳定的，不会发生原子重叠或结构崩溃。</li>
+<li><strong><code>MOFChecker</code>：</strong> 使用第三方工具检查元素组成、孔隙率、电荷分布以及是否有断开的原子。</li>
+</ol>
+</li>
+<li><strong>Novel：</strong> 生成的 MOF 不能是训练集里的已知MOF，通过比较 <code>MOFid</code>来确认。</li>
+<li><strong>Unique：</strong> 10,000 个样本要各具特色。</li>
+</ul>
+<blockquote>
+<p>[!NOTE]</p>
+<p>为了验证它能不能设计出捕捉二氧化碳的“特种材料”，作者动用了<strong>分子模拟</strong>。</p>
+<ul>
+<li><strong>潜空间优化（Latent Optimization）：</strong> 模型不是盲目乱抽样，而是利用 <strong>Adam 优化器</strong> 在模型的潜空间里定向搜索，寻找那些预测 CO<sub>2</sub> 工作容量最高的结构。</li>
+<li><strong>GCMC 模拟：</strong>作者实现了大正则系综蒙特卡洛（GCMC,grand canonical Monte Carlo）模拟，计算了：</li>
+<li><strong>工作容量（Working Capacity）：</strong> 循环中真正能抓多少二氧化碳。</li>
+<li><strong>选择性（Selectivity）：</strong> 能不能在氮气堆里精准抓出二氧化碳。</li>
+<li><strong>吸附热（Heat of Adsorption）：</strong> 抓得牢不牢。</li>
+</ul>
+</blockquote>
+<ul>
+<li>MOFCHECKER</li>
+<li>Sanity checks:<ul>
+<li>Presence of at least one metal, carbon and hydrogen atom</li>
+<li>Overlapping atoms (distance between atoms above covalent <em>radius</em> of the smaller atom)</li>
+<li>Overvalent carbons (coordination number above 4), nitrogens (heuristics), or hydrogens (CN &gt; 1)</li>
+<li>Missing hydrogen on common coordination geometries of C and N (heuristics)</li>
+<li>Atoms with excessive <a href="https://pubs.acs.org/doi/10.1021/jz3008485">EQeq partial charge</a></li>
+</ul>
+</li>
+<li>Basic analysis:<ul>
+<li>Presence of floating atoms or molecules</li>
+<li>Hash of the atomic structure graph (useful to identify duplicates)</li>
+</ul>
+</li>
+<li>元素组成检查，原子重叠检查，超价检查，缺失氢原子检查，异常部分电荷（原子的电荷极高或极低），孤立原子或分子，原子结构图哈希 （去重）</li>
+</ul>
+<h2 id="_2">实验可合成性<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="_3">产品有效性与合成难易度<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>System of Agentic AI for the Discovery of  Metal-Organic Frameworks</p>
+</li>
+<li>
+<p><strong>孔隙率筛选 (Porosity Screening via Zeo++)</strong>：</p>
+<ul>
+<li><strong>PLD (Pore Limiting Diameter)</strong>：限孔直径必须 <span class="arithmatex">\(&gt; 2.5\)</span> Å（确保小分子如 <span class="arithmatex">\(N_2\)</span> 能通过）。</li>
+<li><strong>LCD (Largest Cavity Diameter)</strong>：最大空腔直径。</li>
+<li><strong>Void Fraction (空隙率)</strong>：要求 <span class="arithmatex">\(&gt; 30\%\)</span>。</li>
+<li><strong>可及孔容 (Accessible Volume)</strong>：要求可及孔体积必须大于不可及孔体积。</li>
+</ul>
+</li>
+<li>使用 <strong>MACE-MP-0</strong>（机器学习力场）进行弛豫，结构必须能在力场下达到能量最低点，不发生原子重叠或晶格崩溃</li>
+<li><strong>配体合成路线分析 (Reaction Pathway)</strong>：<ul>
+<li>利用 <strong>Allchemy</strong> 软件对生成的有机配体进行逆合成分析，判断其是否可以从廉价易得的原料合成。</li>
+</ul>
+</li>
+<li><strong>多维合成评分</strong>：<ul>
+<li><strong>SA score (Synthetic Accessibility)</strong>：合成难易程度。</li>
+<li><strong>SCScore (Synthetic Complexity)</strong>：合成复杂性。</li>
+<li><strong>BR-SAScore</strong>：专门针对桥接配体的改良评分。</li>
+</ul>
+</li>
+<li><strong>人类专家盲测 (Human-in-the-loop Blind Test)</strong>：<ul>
+<li><strong>指标</strong>：由经验丰富的实验化学家对 AI 生成的配体进行 1-5 分的打分（1 为极难合成，5 为极易合成）。</li>
+<li><strong>验证结果</strong>：将 AI 的预测与人类直觉对比，确保 AI 推荐的结构在化学上是合理的。</li>
+</ul>
+</li>
+</ul>
+<p>### 物理与力学稳定性 </p>
+<ul>
+<li><strong>热稳定性评估 (<span class="arithmatex">\(T_d\)</span>)</strong>：<ul>
+<li>通过机器学习模型预测材料的<strong>热分解温度</strong>。</li>
+</ul>
+</li>
+<li><strong>溶剂脱除稳定性 (Stability after Activation)</strong>：<ul>
+<li>预测材料在去除孔道内溶剂分子后，其骨架是否能保持完整。</li>
+</ul>
+</li>
+<li><strong>力学强度 (Mechanical Integrity)</strong>：<ul>
+<li><strong>体积模量 (Bulk Moduli)</strong>：利用机器学习力场计算材料的抗压能力，模量越高代表结构越坚固。</li>
+</ul>
+</li>
+<li>
+<p><strong>能量评估 (Formation Energy)</strong>：</p>
+<ul>
+<li>使用高精度的 <strong>DFT (r2SCAN-D4)</strong> 计算形成能，确认其在热力学上的相对稳定性。</li>
+</ul>
+</li>
+<li>
+<p>A generative artificial intelligence framework based on a molecular diffusion model for the design of metal-organic frameworks for carbon capture</p>
+</li>
+<li>
+<p>合成可行性 (Synthesizability)</p>
+<ul>
+<li><strong>SA Score (Synthetic Accessibility Score)</strong>：利用 <mark>RDKit</mark> 等工具计算配体的合成可及性分数。分数越低，代表该有机配体在实验室中被合成的可能性越高。</li>
+</ul>
+</li>
+<li>
+<p>动力学稳定性评估 (Stability via Molecular Dynamics)</p>
+<ul>
+<li><strong>MD 模拟</strong>：对初步筛选出的 MOF 进行 <strong>1 纳秒 (ns)</strong> 的分子动力学模拟（在 300 K 和 1 bar 条件下）。</li>
+<li><strong>判断标准</strong>：如果在模拟过程中晶格保持完整、没有发生剧烈的结构坍塌或化学键断裂，则认为该材料在室温下具有物理稳定性。</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(CO_2\)</span> 吸附性能评估 (Performance Metrics)</p>
+<ul>
+<li><strong>GNN 快速筛选</strong>：使用 <strong>晶体图神经网络 (Crystal Graph Neural Networks)</strong> 对数万个结构进行初步扫描，预测其 <span class="arithmatex">\(CO_2\)</span> 吸附容量。</li>
+<li><strong>GCMC 精确模拟</strong>：对 GNN 选出的佼佼者进行 <strong>大正则系综蒙特卡洛 (GCMC)</strong> 模拟。<ul>
+<li><strong>工作条件</strong>：模拟在 298 K 和 0.15 bar（典型的烟道气分压）下的吸附容量。</li>
+<li><strong>容量指标</strong>：最终挑选出吸附容量大于 <strong>2 mmol/g</strong> 的高性能 MOF。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Continuous Uniqueness and Novelty Metrics for Generative Modeling of Inorganic Crystals</strong></p>
+</li>
+<li>
+<p>将“定性”的判断转变为“定量”的连续计算。</p>
+<h4 id="1-uniqueness">1. 唯一性 (Uniqueness)<a class="headerlink" href="#1-uniqueness" title="Permanent link">&para;</a></h4>
+<p>唯一性衡量的是生成的 <span class="arithmatex">\(N\)</span> 个样本中，有多少是互不相同的。</p>
+<ul>
+<li>
+<p><strong>传统做法</strong>：只要两个结构超过了预设的阈值，就判定为重复。</p>
+</li>
+<li>
+<p><strong>新标准 (<span class="arithmatex">\(U_{d}\)</span>)</strong>：基于距离的唯一性。</p>
+</li>
+<li>
+<p>公式逻辑：计算所有样本对之间的实际物理距离（实数值）的平均值。 在这两种情况下，数值越大代表样本集的多样性越高。</p>
+<div class="arithmatex">\[U_{d} = \frac{1}{N} \sum_{i=1}^{N} \exp\left(-\sum_{j \neq i} K(d(x_i, x_j))\right)\]</div>
+<p><img alt="image-20260207100727141" src="../assets/image-20260207100727141.png" /></p>
+</li>
+<li>
+<p><strong>分析</strong>：它不再是简单的计数，而是考察样本在空间中的分布。如果大量样本堆在一起（距离很近），得分会迅速下降。这能有效识别出那些“换汤不换药”的生成结果。</p>
+</li>
+</ul>
+<h4 id="2-novelty">2. 新颖性 (Novelty)<a class="headerlink" href="#2-novelty" title="Permanent link">&para;</a></h4>
+<p>新颖性衡量生成的样本与训练数据集（已知材料）的差异。</p>
+<ul>
+<li>
+<p><strong>新标准 (<span class="arithmatex">\(N_{d}\)</span>)</strong>：</p>
+</li>
+<li>
+<p>计算每个生成样本到训练集中“最近邻居”的物理距离。 得分越高，表示生成结果与已知数据（训练集）的差异越大。</p>
+<div class="arithmatex">\[d_{min} = \min_{x_t \in X_{train}} d(x_g, x_t)\]</div>
+<p><img alt="image-20260207100715121" src="../assets/image-20260207100715121.png" /></p>
+</li>
+<li>
+<p><strong>分析</strong>：通过设置一个连续的核函数，该指标能量化“创新的程度”。如果 AI 生成了一个和已知材料结构相似但元素不同的晶体，新指标能捕捉到这种“微创新”，而不是直接给 0 分或 1 分。</p>
+</li>
+</ul>
+<h4 id="3">3. 距离函数的选择<a class="headerlink" href="#3" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Sine-based Distance</strong>：专门衡量晶格对称性和原子位置。</li>
+<li>它通过正弦函数处理原子坐标。由于晶体具有<strong>周期性</strong>（像无限重复的方格），原子的位置会在晶格中不断循环。正弦函数完美模拟了这种周期性——当一个原子从晶格的一头移动到另一头时，正弦值是平滑过渡的。</li>
+<li>解决了“坐标平移”的问题。在旧指标下，如果你把整个结构向左平移了 <span class="arithmatex">\(0.1\)</span> Å，系统可能判定为新结构；但在 Sine-based 距离下，它能识别出这其实是同一个东西。</li>
+<li><strong>Descriptor-based Distance (Magpie)</strong>：<strong>Magpie</strong> 是一套预定义的特征向量（Descriptors），它将每个元素转化为一系列物理化学属性，如：</li>
+<li>原子序数、电负性、原子半径、价电子数等。</li>
+<li><strong>计算方式</strong>：它会计算生成样本中所有元素的这些属性的<strong>统计量</strong>（平均值、方差、范围等），形成一个高维向量。两个晶体之间的距离就是这两个向量之间的欧氏距离</li>
+<li>这样可以区分化学相似性</li>
+<li><strong>优势</strong>：这种多维度距离保证了评估标准具备 <strong>Lipschitz 连续性</strong>——即结构的小波动只会导致得分的小波动，评价结果极其稳定。</li>
+</ul>
+<h4 id="4">4. 评估标准的四大特征<a class="headerlink" href="#4" title="Permanent link">&para;</a></h4>
+<p>论文提出，一个合格的评估标准必须满足：</p>
+<ol>
+<li><strong>连续性 (Continuity)</strong>：能区分相似度的等级。</li>
+<li><strong>区分度 (Discriminative power)</strong>：能分清是“化学组成变了”还是“晶体结构变了”。</li>
+<li><strong>置换不变性 (Permutation Invariance)</strong>：算出的得分不随样本录入顺序改变。</li>
+<li><strong>计算效率</strong>：能快速处理万级规模的生成数据。</li>
+</ol>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

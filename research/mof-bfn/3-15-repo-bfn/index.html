@@ -1,0 +1,2675 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../3-12-repo-bfn/">
+      
+      
+        <link rel="next" href="../3-16-repo-bfn/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>3-15-repo - misaka's note</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="misaka&#39;s note" class="md-header__button md-logo" aria-label="misaka's note" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            misaka's note
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              3-15-repo
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home page
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Lecture%20notes/CS106L/note/" class="md-tabs__link">
+          
+  
+  
+  Lecture notes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../mof%E5%A4%8D%E7%8E%B0%26%E8%AF%84%E4%BC%B0%E6%A0%87%E5%87%86/" class="md-tabs__link">
+          
+  
+  
+  Research notes
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../kaggle/%E6%B3%B0%E5%9D%A6%E5%B0%BC%E5%85%8B%E5%8F%B7%E7%AB%9E%E8%B5%9B%E6%80%9D%E8%B7%AF%E5%8F%8A9%E7%A7%8D%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B%E7%9A%84%E4%BB%A3%E7%A0%81%E8%AF%A6%E8%A7%A3/" class="md-tabs__link">
+          
+  
+  
+  Kaggle
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="misaka&#39;s note" class="md-nav__button md-logo" aria-label="misaka's note" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    misaka's note
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home page
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lecture notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Lecture%20notes/CS106L/note/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CS106L
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OOP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    OOP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Lecture%20notes/oop/lecture0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 0: Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Lecture%20notes/oop/lecture1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 1: C++ Basics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    人工智能逻辑
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    人工智能逻辑
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Lecture%20notes/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E9%80%BB%E8%BE%91/course_overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程概要
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Lecture%20notes/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E9%80%BB%E8%BE%91/chapter1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章：推理与论证
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Lecture%20notes/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E9%80%BB%E8%BE%91/chapter2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章 预备知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Research notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    mof-bfn
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    mof-bfn
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mof%E5%A4%8D%E7%8E%B0%26%E8%AF%84%E4%BC%B0%E6%A0%87%E5%87%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    mof reproduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Validity%20Check/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Validity Check
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-2-repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-2-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-3-repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-3-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-4-repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-4-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-5-repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-5-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-6-repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-6-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-7-repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-7-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-8-repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-8-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MOFBFN%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-9-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-10-repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-10-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-11-repo-bfn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-11-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-12-repo-bfn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-12-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-15-repo
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-15-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        上一次训练的实验结果
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bfn-loss-mofchecker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        分析 BFN 各 loss 与 MOFChecker 指标的关系
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="分析 BFN 各 loss 与 MOFChecker 指标的关系">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Loss 指标含义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loss-mofchecker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Loss 与 MOFChecker 的假设对应关系
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        验证假设
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="验证假设">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-baseline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 对 baseline 进行分析
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 对 baseline 进行分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#baseline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        各检查通过率（Baseline）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect_check-98-has_lone_molecule-75" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        connect_check (98%) 与 has_lone_molecule (75%) 为何不一致？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        主要短板
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#has_atomic_overlaps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        按体积分桶：has_atomic_overlaps（无重叠）通过率
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#has_lone_molecule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        按原子数分桶：has_lone_molecule（无孤立分子）通过率
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-mofchecker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 阅读 MOFChecker 源代码
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 消融实验设计（验证「哪个 loss 驱动哪个指标」）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 消融实验设计（验证「哪个 loss 驱动哪个指标」）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        六组消融解读
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loss-mofchecker_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        从消融实验得出的 Loss 与 MOFChecker 指标关系
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        根据实验后的改进想法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="根据实验后的改进想法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 重新平衡 type 权重
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-lattice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 适当加大 lattice 权重
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-coord-rot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. coord / rot 权重
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        反思总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-16-repo-bfn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-16-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-19-repo-bfn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-19-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-22-repo-bfn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-22-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    atommof
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    atommof
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atommof/ATOMMOF%20notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ATOMMOF notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atommof/3-11-repo-atommof/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-11-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atommof/3-12-repo-atommof/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-12-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kaggle
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Kaggle
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../kaggle/%E6%B3%B0%E5%9D%A6%E5%B0%BC%E5%85%8B%E5%8F%B7%E7%AB%9E%E8%B5%9B%E6%80%9D%E8%B7%AF%E5%8F%8A9%E7%A7%8D%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B%E7%9A%84%E4%BB%A3%E7%A0%81%E8%AF%A6%E8%A7%A3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Titanic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        上一次训练的实验结果
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bfn-loss-mofchecker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        分析 BFN 各 loss 与 MOFChecker 指标的关系
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="分析 BFN 各 loss 与 MOFChecker 指标的关系">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Loss 指标含义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loss-mofchecker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Loss 与 MOFChecker 的假设对应关系
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        验证假设
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="验证假设">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-baseline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 对 baseline 进行分析
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 对 baseline 进行分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#baseline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        各检查通过率（Baseline）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect_check-98-has_lone_molecule-75" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        connect_check (98%) 与 has_lone_molecule (75%) 为何不一致？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        主要短板
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#has_atomic_overlaps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        按体积分桶：has_atomic_overlaps（无重叠）通过率
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#has_lone_molecule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        按原子数分桶：has_lone_molecule（无孤立分子）通过率
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-mofchecker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 阅读 MOFChecker 源代码
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 消融实验设计（验证「哪个 loss 驱动哪个指标」）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 消融实验设计（验证「哪个 loss 驱动哪个指标」）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        六组消融解读
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loss-mofchecker_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        从消融实验得出的 Loss 与 MOFChecker 指标关系
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        根据实验后的改进想法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="根据实验后的改进想法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 重新平衡 type 权重
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-lattice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 适当加大 lattice 权重
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-coord-rot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. coord / rot 权重
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        反思总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>3-15-repo</h1>
+
+<h2 id="_1">上一次训练的实验结果<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Connect 通过率</strong>：0.942  </li>
+<li>充分训练之后，结果仍然没有 baseline 好。</li>
+</ul>
+<p><img alt="image-20260315105655418" src="../assets/image-20260315105655418.png" /></p>
+<hr />
+<h2 id="bfn-loss-mofchecker">分析 BFN 各 loss 与 MOFChecker 指标的关系<a class="headerlink" href="#bfn-loss-mofchecker" title="Permanent link">&para;</a></h2>
+<h3 id="loss">Loss 指标含义<a class="headerlink" href="#loss" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Loss</th>
+<th>形式</th>
+<th>直接优化的量</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>lattice_loss</strong></td>
+<td><code>dtime4continuous_loss</code>：按时间步加权的 <strong>MSE(x_pred, x_gt)</strong></td>
+<td>晶格参数与 GT 的匹配</td>
+<td>6 维：<code>(log(a), log(b), log(c), tan(α-π/2), ...)</code>，即晶胞边长与夹角</td>
+</tr>
+<tr>
+<td><strong>coord_loss</strong></td>
+<td><code>dtime4circular_loss</code>：<strong>周期坐标</strong>上的误差</td>
+<td>分数坐标与 GT 的匹配</td>
+<td>每个 building block 中心的分数坐标 (x,y,z) ∈ [0,1)</td>
+</tr>
+<tr>
+<td><strong>rot_loss</strong></td>
+<td><code>dtime4quat_loss</code>：<strong>1 - (q_pred·q_gt)²</strong>（四元数）</td>
+<td>每个 block 的朝向与 GT 的匹配</td>
+<td>旋转/取向</td>
+</tr>
+<tr>
+<td><strong>type_loss</strong></td>
+<td><code>dtime4continuous_loss</code>：<strong>MSE(type_pred, type_gt)</strong>（连续嵌入空间）</td>
+<td>block 类型嵌入与 GT 的匹配</td>
+<td>当前是哪种 building block（节点/配体等）</td>
+</tr>
+<tr>
+<td><strong>vol 正则</strong>（后添加）</td>
+<td>hinge/floor on <strong>log(V)</strong></td>
+<td>惩罚「体积过小」</td>
+<td>只约束晶胞体积下界，不直接约束具体键长/配位</td>
+</tr>
+</tbody>
+</table>
+<p>总 loss = <code>cost_lattice*lattice + cost_coord*coord + cost_rot*rot + cost_type*type</code>（再加可选 vol 项）。</p>
+<p><strong>要点：</strong></p>
+<ul>
+<li>所有 loss 都是<strong>对 GT 的拟合</strong>（MSE 或等价的匹配），没有直接写「不要重叠」「配位数要对」等规则。</li>
+<li>重叠、配位、孔隙等，只能<strong>通过学到的分布</strong>间接影响：模型学得好 → 生成结构更像训练集 → 理论上更易通过 MOFChecker。</li>
+</ul>
+<h3 id="loss-mofchecker">Loss 与 MOFChecker 的假设对应关系<a class="headerlink" href="#loss-mofchecker" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>MOFChecker 指标</th>
+<th>最可能相关的 Loss / 预测</th>
+<th>简要理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>has_atomic_overlaps</td>
+<td><strong>coord_loss</strong> + <strong>lattice_loss</strong></td>
+<td>重叠 = 原子太近 → 位置错或晶胞太小/扭曲；体积正则只约束总体积，不直接约束键长</td>
+</tr>
+<tr>
+<td>has_overcoordinated</td>
+<td><strong>coord_loss</strong> + <strong>type_loss</strong></td>
+<td>配位数由「谁和谁成键」决定 → 位置 + 类型；rot 影响键角，间接影响配位判定</td>
+</tr>
+<tr>
+<td>has_lone_molecule</td>
+<td><strong>coord_loss</strong> + <strong>type_loss</strong></td>
+<td>孤立分子 = 连通性断裂 → 哪些 block 放哪、是否连成骨架</td>
+</tr>
+<tr>
+<td>is_porous</td>
+<td><strong>lattice_loss</strong> + <strong>vol 正则</strong></td>
+<td>孔隙与晶胞大小、体积、形状强相关；coord 决定原子占位，也影响孔道</td>
+</tr>
+<tr>
+<td>has_carbon / has_hydrogen / has_metal</td>
+<td><strong>type_loss</strong></td>
+<td>成分是否包含 C/H/金属 → 主要看 block 类型预测</td>
+</tr>
+<tr>
+<td>has_high_charges / suspicious_terminal_oxo / exposed_metal</td>
+<td><strong>type_loss</strong> + <strong>coord/rot</strong></td>
+<td>化学/几何异常 → 类型与局部几何（位置+取向）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>假设小结：</strong></p>
+<ul>
+<li><strong>coord_loss</strong> 和 <strong>lattice_loss</strong> 很可能对 overlaps、配位、连通性、孔隙都有影响。</li>
+<li><strong>type_loss</strong> 主要对成分和部分化学检查有影响。</li>
+<li><strong>rot_loss</strong> 更多通过键角/几何间接影响配位和暴露金属等。</li>
+<li>单独调 <strong>vol 正则</strong> 主要作用在体积/孔隙相关，对重叠/配位的直接作用有限，需要和 lattice/coord 一起看。</li>
+</ul>
+<hr />
+<h2 id="_2">验证假设<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="1-baseline">1. 对 baseline 进行分析<a class="headerlink" href="#1-baseline" title="Permanent link">&para;</a></h3>
+<h4 id="baseline">各检查通过率（Baseline）<a class="headerlink" href="#baseline" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>检查项</th>
+<th>通过率</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>has_carbon</td>
+<td>1.00</td>
+<td>全部含 C</td>
+</tr>
+<tr>
+<td>has_metal</td>
+<td>1.00</td>
+<td>全部含金属</td>
+</tr>
+<tr>
+<td>has_undercoordinated_rare_earth / has_suspicious_terminal_oxo</td>
+<td>1.00</td>
+<td>无此类问题</td>
+</tr>
+<tr>
+<td>has_hydrogen</td>
+<td>0.99</td>
+<td>约 1% 缺 H</td>
+</tr>
+<tr>
+<td>has_overcoordinated_n / has_undercoordinated_alkali_alkaline</td>
+<td>0.98</td>
+<td>配位/碱金属问题很少</td>
+</tr>
+<tr>
+<td>has_high_charges</td>
+<td>0.94</td>
+<td>约 6% 高电荷</td>
+</tr>
+<tr>
+<td><strong>has_atomic_overlaps</strong></td>
+<td><strong>0.91</strong></td>
+<td>约 9% 有原子重叠</td>
+</tr>
+<tr>
+<td>has_overcoordinated_h / has_undercoordinated_n</td>
+<td>0.85</td>
+<td>约 15% H/N 配位异常</td>
+</tr>
+<tr>
+<td>has_overcoordinated_c</td>
+<td>0.84</td>
+<td>约 16% C 配位过高</td>
+</tr>
+<tr>
+<td>has_undercoordinated_c</td>
+<td>0.76</td>
+<td>约 24% C 配位不足</td>
+</tr>
+<tr>
+<td><strong>has_lone_molecule</strong></td>
+<td><strong>0.75</strong></td>
+<td>约 25% 存在孤立分子（连通性差），但 connect check 通过率却是 98%</td>
+</tr>
+<tr>
+<td><strong>has_geometrically_exposed_metal</strong></td>
+<td><strong>0.65</strong></td>
+<td>约 35% 几何暴露金属</td>
+</tr>
+<tr>
+<td><strong>all_checks</strong></td>
+<td><strong>0.31</strong></td>
+<td>仅约 <strong>31%</strong> 同时通过全部检查</td>
+</tr>
+</tbody>
+</table>
+<h4 id="connect_check-98-has_lone_molecule-75">connect_check (98%) 与 has_lone_molecule (75%) 为何不一致？<a class="headerlink" href="#connect_check-98-has_lone_molecule-75" title="Permanent link">&para;</a></h4>
+<p>两者定义不同：connect_check 可能基于图连通性或阈值较松的成键判定；has_lone_molecule 可能对「孤立分子」有更严格的几何/化学判定。因此会出现 connect 通过率高而 lone_molecule 通过率较低的情况。</p>
+<h4 id="_3">主要短板<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>has_geometrically_exposed_metal (0.65)</strong>：暴露金属最多。</li>
+<li><strong>has_lone_molecule (0.75)</strong>：约 &frac14; 存在孤立分子，说明 3D 连通性不足。</li>
+<li><strong>has_undercoordinated_c (0.76)</strong>：C 配位不足。</li>
+<li><strong>has_overcoordinated_c (0.84)</strong>、<strong>has_undercoordinated_n / has_overcoordinated_h</strong> (0.85)：C/N/H 配位略差。</li>
+<li><strong>has_atomic_overlaps (0.91)</strong>。</li>
+</ul>
+<h4 id="has_atomic_overlaps">按体积分桶：has_atomic_overlaps（无重叠）通过率<a class="headerlink" href="#has_atomic_overlaps" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>体积桶 (Å³)</th>
+<th>通过率</th>
+<th>样本数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>573 ~ 1527</td>
+<td>1.00</td>
+<td>20</td>
+</tr>
+<tr>
+<td>1527 ~ 2310</td>
+<td>0.90</td>
+<td>20</td>
+</tr>
+<tr>
+<td>2310 ~ 3090</td>
+<td>0.85</td>
+<td>20</td>
+</tr>
+<tr>
+<td>3090 ~ 5232</td>
+<td>1.00</td>
+<td>20</td>
+</tr>
+<tr>
+<td>5232 ~ 58840</td>
+<td>0.80</td>
+<td>20</td>
+</tr>
+</tbody>
+</table>
+<p>「体积小」并没有带来更多原子重叠，反而是最大的体积桶最差，可能与晶胞过大、原子排布更散或相对位置误差更大有关。</p>
+<h4 id="has_lone_molecule">按原子数分桶：has_lone_molecule（无孤立分子）通过率<a class="headerlink" href="#has_lone_molecule" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>原子数桶</th>
+<th>通过率</th>
+<th>样本数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>26 ~ 58</td>
+<td>0.76</td>
+<td>21</td>
+</tr>
+<tr>
+<td>58 ~ 74</td>
+<td>0.85</td>
+<td>20</td>
+</tr>
+<tr>
+<td>74 ~ 99</td>
+<td>0.74</td>
+<td>19</td>
+</tr>
+<tr>
+<td>99 ~ 135</td>
+<td>0.80</td>
+<td>20</td>
+</tr>
+<tr>
+<td><strong>135 ~ 444</strong></td>
+<td><strong>0.60</strong></td>
+<td>20</td>
+</tr>
+</tbody>
+</table>
+<p><strong>原子数最多的一桶</strong>（135–444）通过率明显最低（<strong>0.60</strong>）：结构越大、block 越多，越容易出现孤立分子或连通性断裂。</p>
+<hr />
+<h3 id="2-mofchecker">2. 阅读 MOFChecker 源代码<a class="headerlink" href="#2-mofchecker" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>MOFChecker 指标</th>
+<th>主要依赖的 loss</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>has_atomic_overlaps</td>
+<td><strong>coord, lattice</strong></td>
+<td>纯距离：重叠 = dist &lt; min(cov_r)</td>
+</tr>
+<tr>
+<td>has_overcoordinated</td>
+<td><strong>coord, type, rot</strong></td>
+<td>配位数来自图；图由距离+类型建边；键角来自 rot</td>
+</tr>
+<tr>
+<td>has_geometrically_exposed_metal</td>
+<td><strong>coord, rot</strong></td>
+<td>配位锥角由配体位置+取向决定</td>
+</tr>
+<tr>
+<td>has_lone_molecule</td>
+<td><strong>coord, type, lattice</strong></td>
+<td>连通分量是否跨 PBC，由成键图决定</td>
+</tr>
+<tr>
+<td>has_3d_connected_graph</td>
+<td><strong>coord, type, lattice</strong></td>
+<td>同上，图连通性</td>
+</tr>
+<tr>
+<td>is_porous</td>
+<td><strong>lattice, coord, 体积</strong></td>
+<td>孔由晶胞与占位决定；zeo++ PLD≥2.4</td>
+</tr>
+<tr>
+<td>has_high_charges</td>
+<td>type, coord, rot</td>
+<td>电荷由成分与几何间接决定</td>
+</tr>
+<tr>
+<td>has_carbon / has_hydrogen / has_metal</td>
+<td><strong>type</strong></td>
+<td>成分</td>
+</tr>
+<tr>
+<td>has_suspicious_terminal_oxo</td>
+<td><strong>coord, rot, type</strong></td>
+<td>局部化学环境</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="3-loss">3. 消融实验设计（验证「哪个 loss 驱动哪个指标」）<a class="headerlink" href="#3-loss" title="Permanent link">&para;</a></h3>
+<p>思路：在<strong>固定数据、固定其他 cost</strong> 下，<strong>单变量</strong>放大某一 cost，训到相近步数/epoch，同一套推理+评估，看 MOFChecker 各通过率与 connect_check 的变化。</p>
+<table>
+<thead>
+<tr>
+<th>Run</th>
+<th>all_checks</th>
+<th>has_atomic_overlaps</th>
+<th>has_lone_molecule</th>
+<th>has_geometrically_exposed_metal</th>
+<th>has_overcoordinated_c</th>
+<th>has_undercoordinated_c</th>
+<th>connect_check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>baseline</td>
+<td>0.31</td>
+<td>0.91</td>
+<td>0.75</td>
+<td>0.65</td>
+<td>0.84</td>
+<td>0.76</td>
+<td>0.98</td>
+</tr>
+<tr>
+<td>abl_baseline_small</td>
+<td>0.00</td>
+<td>0.49</td>
+<td><strong>0.97</strong></td>
+<td>0.72</td>
+<td>0.39</td>
+<td>0.21</td>
+<td>0.39</td>
+</tr>
+<tr>
+<td>abl_type_low_02_small</td>
+<td>0.00</td>
+<td>0.65</td>
+<td>0.95</td>
+<td><strong>0.80</strong></td>
+<td><strong>0.77</strong></td>
+<td>0.51</td>
+<td>0.28</td>
+</tr>
+<tr>
+<td>abl_type_15_small</td>
+<td>0.00</td>
+<td><strong>0.70</strong></td>
+<td>0.90</td>
+<td>0.75</td>
+<td>0.51</td>
+<td><strong>0.08</strong></td>
+<td>0.32</td>
+</tr>
+<tr>
+<td>abl_coord_2_small</td>
+<td>0.00</td>
+<td>0.55</td>
+<td>0.81</td>
+<td>0.63</td>
+<td>0.53</td>
+<td>0.30</td>
+<td>0.38</td>
+</tr>
+<tr>
+<td>abl_lattice_2_small</td>
+<td><strong>0.01</strong></td>
+<td>0.58</td>
+<td>0.87</td>
+<td>0.72</td>
+<td>0.56</td>
+<td>0.13</td>
+<td>0.34</td>
+</tr>
+<tr>
+<td>abl_rot_15_small</td>
+<td>0.00</td>
+<td>0.57</td>
+<td>0.95</td>
+<td>0.74</td>
+<td>0.54</td>
+<td>0.21</td>
+<td>0.35</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_4">六组消融解读<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p>小规模短训下 all_checks 多为 0，仅 <strong>abl_lattice_2_small</strong> 为 0.01（1 条全过）；相对变化足以区分各 cost 的效应。</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>最优 run</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>all_checks</td>
+<td>abl_lattice_2_small</td>
+</tr>
+<tr>
+<td>has_atomic_overlaps / has_undercoordinated_c</td>
+<td>abl_type_15_small</td>
+</tr>
+<tr>
+<td>has_lone_molecule</td>
+<td>abl_baseline_small</td>
+</tr>
+<tr>
+<td>has_geometrically_exposed_metal / has_overcoordinated_c / 成分</td>
+<td>abl_type_low_02_small</td>
+</tr>
+</tbody>
+</table>
+<p><strong>小结</strong>：type_low_02 在暴露金属、成分、overcoordinated_c 最好；type_15 在 overlaps、undercoordinated_c 最好；lattice_2 唯一 all_checks&gt;0。coord_2 本批中连通性与暴露金属最差，需长训或改 cost_coord 再验证。后续可试 cost_type 中间值（0.5～2）或 type_low + lattice 组合。</p>
+<h4 id="loss-mofchecker_1">从消融实验得出的 Loss 与 MOFChecker 指标关系<a class="headerlink" href="#loss-mofchecker_1" title="Permanent link">&para;</a></h4>
+<p>根据六组消融（改单一 cost_*）与 MOFChecker/connect_check 的对应，归纳如下。与上文「假设」一致处已用「✓」标出；不一致或需进一步验证的也标出。</p>
+<table>
+<thead>
+<tr>
+<th>Loss（调节 cost_*）</th>
+<th>消融中主要影响的 MOFChecker 指标</th>
+<th>方向（权重↑时）</th>
+<th>与源码/假设是否一致</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>type_loss</strong></td>
+<td>has_atomic_overlaps、has_undercoordinated_c、has_overcoordinated_c、has_geometrically_exposed_metal、has_carbon/hydrogen、has_lone_molecule、connect_check</td>
+<td>type 权重大 → overlaps↑、undercoordinated_c↑、connect 略↓；权重小 → exposed_metal↑、overcoordinated_c↑、成分↑、undercoordinated_c↓</td>
+<td>✓ 成分/配位与 type 对应；压 type 后 exposed_metal/overcoordinated_c 变好，与「让 coord/rot 多占梯度」一致</td>
+</tr>
+<tr>
+<td><strong>coord_loss</strong></td>
+<td>has_lone_molecule、has_geometrically_exposed_metal</td>
+<td>coord 权重↑（本批）→ lone_molecule↓、exposed_metal↓</td>
+<td>与「coord 主导连通性/重叠」的假设相反，可能与小规模/步数或权重 2.0 有关，需全文或更长训再验证</td>
+</tr>
+<tr>
+<td><strong>lattice_loss</strong></td>
+<td>all_checks、has_atomic_overlaps、has_undercoordinated_c</td>
+<td>lattice 权重↑ → 唯一 all_checks&gt;0，overlaps/undercoordinated_c 中等偏好</td>
+<td>✓ 与「lattice 影响体积/重叠/孔隙」一致；对「全项通过」有边际帮助</td>
+</tr>
+<tr>
+<td><strong>rot_loss</strong></td>
+<td>各项较均衡；has_lone_molecule、has_geometrically_exposed_metal 中等</td>
+<td>rot 权重↑ → 连通性与暴露金属居中，无单项最差</td>
+<td>✓ 与「rot 影响配位几何/键角、间接影响暴露金属」一致</td>
+</tr>
+</tbody>
+</table>
+<p><strong>简要结论：</strong></p>
+<ul>
+<li><strong>想提 has_geometrically_exposed_metal、has_overcoordinated_c、成分</strong>：适当压低 cost_type（如 0.2）或保持中等，让 coord/rot 梯度更足。</li>
+<li><strong>想提 has_atomic_overlaps、has_undercoordinated_c</strong>：可适当提高 cost_type（如 15）或配合 lattice；注意 cost_type 过高会损 has_lone_molecule 与 connect_check。</li>
+<li><strong>想提 all_checks / 全项通过</strong>：本批消融中加大 cost_lattice（lattice_2）是唯一出现 all_checks&gt;0 的设定，可保留或与 type 中间权重组合。</li>
+<li><strong>has_lone_molecule / connect_check</strong>：本批中 baseline 与 rot_15 较好；coord_2 最差。若全文/长训下仍如此，则不宜单方面大幅提高 cost_coord，需与 type、lattice 一起调。</li>
+</ul>
+<p>以上关系基于当前小规模、短训消融；全文或更长训可能部分修正。</p>
+<hr />
+<h2 id="_5">根据实验后的改进想法<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h3 id="1-type">1. 重新平衡 type 权重<a class="headerlink" href="#1-type" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>现象</strong>：默认 cost_type=10 时 val_type_loss 量级远大于 coord/rot/lattice，总 loss 被 type 主导，几何/连通性学不足。</li>
+<li><strong>做法</strong>：把 <strong>cost_type 从 10 降到 0.5～2</strong>，让 type 与 coord/lattice/rot 的加权贡献同量级。</li>
+<li><strong>预期</strong>：val_loss 更稳，has_geometrically_exposed_metal、has_overcoordinated_c、成分有机会提升。</li>
+<li><strong>实施</strong>：在现有训练命令上加 <code>model.cost_type=1.0</code>（或 0.5），其余 cost 不变，用全文数据训一版，对比 baseline 的 validity 与 connect_check。</li>
+</ul>
+<h3 id="2-lattice">2. 适当加大 lattice 权重<a class="headerlink" href="#2-lattice" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>现象</strong>：消融里唯一 all_checks&gt;0 的是 abl_lattice_2_small；lattice 对重叠、undercoordinated_c、全项通过都有边际帮助。</li>
+<li><strong>做法</strong>：在 type 已 rebalance 的前提下，把 <strong>cost_lattice 从 1 提到 1.2～1.5</strong>，避免过度挤压其他项。</li>
+<li><strong>预期</strong>：all_checks、has_atomic_overlaps、has_undercoordinated_c 可能略有提升。</li>
+<li><strong>实施</strong>：与上一条同跑或作为第二版，例如 <code>model.cost_type=1.0 model.cost_lattice=1.2</code>。</li>
+</ul>
+<h3 id="3-coord-rot">3. coord / rot 权重<a class="headerlink" href="#3-coord-rot" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>coord</strong>：本批消融中 cost_coord=2 使 has_lone_molecule、has_geometrically_exposed_metal 变差，全文/长训下是否反转未验证。建议<strong>先不改或只微调</strong>（如 1.0→1.2），等 type/lattice 调稳后再单独试 cost_coord。</li>
+<li><strong>rot</strong>：rot_15 各项均衡，当前 cost_rot=10 可维持；若想加强配位几何，可试 cost_rot=12～15，优先级低于 type/lattice。</li>
+</ul>
+<hr />
+<h2 id="_6">反思总结<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>半个月前的优化方向有偏差</strong>：当时发现 bad case 里密度问题最多，且 lattice loss 很大，于是从「约束晶体大小、加密度惩罚项」等角度优化，结果忽视了 MOFChecker 里的主要短板（如 has_geometrically_exposed_metal、has_lone_molecule、has_undercoordinated_c 等）。</li>
+</ol>
+<p><img alt="image-20260315114902344" src="../assets/image-20260315114902344.png" /></p>
+<ol>
+<li>
+<p><strong>缺乏经验导致误判</strong>：因为是第一次跑实验，看到 loss 曲线后不清楚什么是重点。第一次跑实验时 lattice_loss 曾到 10<sup>8</sup> 量级；第二次复现时发现 <strong>val_type_loss 才是真正没有收敛、并主导 val_loss 的原因</strong>。</p>
+</li>
+<li>
+<p>第一次实验图像：</p>
+</li>
+</ol>
+<p><img alt="image-20260315115546556" src="../assets/image-20260315115546556.png" /></p>
+<ul>
+<li>第二次复现图像：</li>
+</ul>
+<p><img alt="image-20260315115328324" src="../assets/image-20260315115328324.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

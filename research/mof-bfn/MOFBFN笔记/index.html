@@ -1,0 +1,2963 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../3-8-repo/">
+      
+      
+        <link rel="next" href="../3-10-repo/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>3-9-repo - misaka's note</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mof-bfn-metal-organic-frameworks-structure-prediction-via-bayesian-flow-networks" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="misaka&#39;s note" class="md-header__button md-logo" aria-label="misaka's note" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            misaka's note
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              3-9-repo
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home page
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Lecture%20notes/CS106L/note/" class="md-tabs__link">
+          
+  
+  
+  Lecture notes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../mof%E5%A4%8D%E7%8E%B0%26%E8%AF%84%E4%BC%B0%E6%A0%87%E5%87%86/" class="md-tabs__link">
+          
+  
+  
+  Research notes
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../kaggle/%E6%B3%B0%E5%9D%A6%E5%B0%BC%E5%85%8B%E5%8F%B7%E7%AB%9E%E8%B5%9B%E6%80%9D%E8%B7%AF%E5%8F%8A9%E7%A7%8D%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B%E7%9A%84%E4%BB%A3%E7%A0%81%E8%AF%A6%E8%A7%A3/" class="md-tabs__link">
+          
+  
+  
+  Kaggle
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="misaka&#39;s note" class="md-nav__button md-logo" aria-label="misaka's note" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    misaka's note
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home page
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lecture notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Lecture%20notes/CS106L/note/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CS106L
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OOP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    OOP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Lecture%20notes/oop/lecture0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 0: Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Lecture%20notes/oop/lecture1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 1: C++ Basics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    人工智能逻辑
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    人工智能逻辑
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Lecture%20notes/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E9%80%BB%E8%BE%91/course_overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程概要
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Lecture%20notes/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E9%80%BB%E8%BE%91/chapter1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章：推理与论证
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Lecture%20notes/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E9%80%BB%E8%BE%91/chapter2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章 预备知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Research notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    mof-bfn
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    mof-bfn
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mof%E5%A4%8D%E7%8E%B0%26%E8%AF%84%E4%BC%B0%E6%A0%87%E5%87%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    mof reproduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Validity%20Check/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Validity Check
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-2-repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-2-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-3-repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-3-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-4-repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-4-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-5-repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-5-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-6-repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-6-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-7-repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-7-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-8-repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-8-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-9-repo
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-9-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-background-challenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 研究背景与核心挑战 (Background &amp; Challenges)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-key-innovations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 核心创新点 (Key Innovations)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 核心创新点 (Key Innovations)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-bfn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ① 引入贝叶斯流网络 (BFN) 框架
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-fractional-coordinates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ② 显式周期性建模：分数坐标系 (Fractional Coordinates)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-bingham-bfn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ③ 旋转流形建模：Bingham BFN
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-theoretical-foundations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 理论基础 (Theoretical Foundations)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 理论基础 (Theoretical Foundations)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-mof" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 MOF 的表示
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 MOF 的表示">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.1 原子的全局表示法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-xi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.2 不变晶格参数 \(\xi\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.3 核心：块级层次表示
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1.3 核心：块级层次表示">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        本地结构中原子的表示：
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="本地结构中原子的表示：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-mathbfx_r-pca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (1) 局部坐标 \(\mathbf{x}_r\) 的表示：PCA 规范化
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (2) 确定某个具体原子的全局位置
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-unit-quaternions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 旋转的数学：单位四元数 (Unit Quaternions)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 任务定义：生成式建模
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-bayesian-flow-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 贝叶斯流网络 (Bayesian Flow Networks)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4 贝叶斯流网络 (Bayesian Flow Networks)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-sender" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 发送者（Sender）：产生带噪声的观测
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-receiver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 接收者（Receiver）：基于贝叶斯的“信念更新”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-bayesian-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 贝叶斯流（Bayesian Flow）：参数的轨迹
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 神经网络的角色：模拟发送者
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 训练目标：最小化传输损失
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bfn-vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        总结：BFN vs 扩散模型
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-mof-bfn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. MOF-BFN 实现
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. MOF-BFN 实现">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 晶格参数和坐标
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 晶格参数和坐标">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#411-r6-xi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.1 连续空间 \(R^6\)（晶格参数 \(\xi\)）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412-t3-times-k-f" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.2 环面空间 \(T^{3 \times K}\)（分数坐标 \(F\)）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-bingham-bfn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 针对四元数生成的 Bingham BFN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bingham-eq-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bingham 分布 (Eq. 15)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        贝叶斯更新
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        训练目标
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 训练方案与损失设计
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3 训练方案与损失设计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#431" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.1 合损失函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#432" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.2 扩展到生成任务
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#433-backbone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.3 模型骨干 (Backbone)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 实验结果 (Experiments)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 实验结果 (Experiments)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-structure-prediction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 结构预测精度 (Structure Prediction)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-geometric-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 几何与物理性质评估 (Geometric Property)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-de-novo-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 从头生成能力 (De Novo Generation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-analyses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 消融实验分析 (Analyses)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-10-repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-10-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-11-repo-bfn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-11-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-12-repo-bfn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-12-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-15-repo-bfn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-15-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-16-repo-bfn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-16-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-19-repo-bfn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-19-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-22-repo-bfn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-22-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    atommof
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    atommof
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atommof/ATOMMOF%20notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ATOMMOF notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atommof/3-11-repo-atommof/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-11-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atommof/3-12-repo-atommof/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3-12-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kaggle
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Kaggle
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../kaggle/%E6%B3%B0%E5%9D%A6%E5%B0%BC%E5%85%8B%E5%8F%B7%E7%AB%9E%E8%B5%9B%E6%80%9D%E8%B7%AF%E5%8F%8A9%E7%A7%8D%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B%E7%9A%84%E4%BB%A3%E7%A0%81%E8%AF%A6%E8%A7%A3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Titanic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-background-challenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 研究背景与核心挑战 (Background &amp; Challenges)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-key-innovations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 核心创新点 (Key Innovations)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 核心创新点 (Key Innovations)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-bfn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ① 引入贝叶斯流网络 (BFN) 框架
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-fractional-coordinates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ② 显式周期性建模：分数坐标系 (Fractional Coordinates)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-bingham-bfn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ③ 旋转流形建模：Bingham BFN
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-theoretical-foundations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 理论基础 (Theoretical Foundations)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 理论基础 (Theoretical Foundations)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-mof" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 MOF 的表示
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 MOF 的表示">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.1 原子的全局表示法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-xi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.2 不变晶格参数 \(\xi\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.3 核心：块级层次表示
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1.3 核心：块级层次表示">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        本地结构中原子的表示：
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="本地结构中原子的表示：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-mathbfx_r-pca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (1) 局部坐标 \(\mathbf{x}_r\) 的表示：PCA 规范化
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (2) 确定某个具体原子的全局位置
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-unit-quaternions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 旋转的数学：单位四元数 (Unit Quaternions)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 任务定义：生成式建模
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-bayesian-flow-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 贝叶斯流网络 (Bayesian Flow Networks)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4 贝叶斯流网络 (Bayesian Flow Networks)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-sender" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 发送者（Sender）：产生带噪声的观测
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-receiver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 接收者（Receiver）：基于贝叶斯的“信念更新”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-bayesian-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 贝叶斯流（Bayesian Flow）：参数的轨迹
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 神经网络的角色：模拟发送者
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 训练目标：最小化传输损失
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bfn-vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        总结：BFN vs 扩散模型
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-mof-bfn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. MOF-BFN 实现
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. MOF-BFN 实现">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 晶格参数和坐标
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 晶格参数和坐标">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#411-r6-xi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.1 连续空间 \(R^6\)（晶格参数 \(\xi\)）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412-t3-times-k-f" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.2 环面空间 \(T^{3 \times K}\)（分数坐标 \(F\)）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-bingham-bfn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 针对四元数生成的 Bingham BFN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bingham-eq-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bingham 分布 (Eq. 15)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        贝叶斯更新
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        训练目标
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 训练方案与损失设计
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3 训练方案与损失设计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#431" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.1 合损失函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#432" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.2 扩展到生成任务
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#433-backbone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.3 模型骨干 (Backbone)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 实验结果 (Experiments)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 实验结果 (Experiments)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-structure-prediction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 结构预测精度 (Structure Prediction)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-geometric-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 几何与物理性质评估 (Geometric Property)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-de-novo-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 从头生成能力 (De Novo Generation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-analyses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 消融实验分析 (Analyses)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="mof-bfn-metal-organic-frameworks-structure-prediction-via-bayesian-flow-networks">MOF-BFN: Metal-Organic Frameworks Structure Prediction via Bayesian Flow Networks<a class="headerlink" href="#mof-bfn-metal-organic-frameworks-structure-prediction-via-bayesian-flow-networks" title="Permanent link">&para;</a></h1>
+<h2 id="1-background-challenges">1. 研究背景与核心挑战 (Background &amp; Challenges)<a class="headerlink" href="#1-background-challenges" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>MOF 的复杂性</strong>：金属有机框架（MOFs）由金属节点和有机配体通过配位键组成，具有极高的比表面积和可调孔隙率。但其单胞（Unit Cell）内通常包含数百甚至上千个原子。</li>
+<li><strong>计算成本高</strong>：传统的从头计算（如 DFT）或原子级生成模型在面对如此庞大的体系时，计算效率极低。</li>
+<li><strong>周期性与层级化</strong>：MOF 本质上是<strong>三维周期性</strong>的，且具有明显的<strong>层级结构</strong>（即由建筑块拼装而成）。</li>
+<li><strong>现有模型缺陷</strong>：</li>
+<li><strong>离散化误差</strong>：基于扩散（Diffusion）和流匹配（Flow Matching）的模型依赖 SDE/ODE 求解，采样时的数值离散化会产生累积误差。</li>
+<li><strong>取向建模难</strong>：现有的模型（如 MOFDiff）往往需要繁琐的后处理来优化建筑块的旋转取向。</li>
+</ul>
+<hr />
+<h2 id="2-key-innovations">2. 核心创新点 (Key Innovations)<a class="headerlink" href="#2-key-innovations" title="Permanent link">&para;</a></h2>
+<p>这篇论文最主要的贡献是将<strong>贝叶斯流网络（BFN）</strong>引入 MOF 领域，并针对其物理特性进行了三大创新设计：</p>
+<h3 id="1-bfn">① 引入贝叶斯流网络 (BFN) 框架<a class="headerlink" href="#1-bfn" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>创新逻辑</strong>：不同于扩散模型在数据空间加噪，BFN 通过在<strong>概率分布的参数空间</strong>进行贝叶斯更新来细化生成结果。</li>
+<li><strong>优势</strong>：完全绕过了 SDE/ODE 的数值求解，从根本上消除了采样过程中的<strong>离散化截断误差</strong>，使生成过程更稳定、更准确。</li>
+</ul>
+<h3 id="2-fractional-coordinates">② 显式周期性建模：分数坐标系 (Fractional Coordinates)<a class="headerlink" href="#2-fractional-coordinates" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>创新逻辑</strong>：模型不再直接预测原子的绝对笛卡尔坐标，而是预测相对于晶格矢量的分数坐标 <span class="arithmatex">\(F \in [0, 1)^3\)</span>。</li>
+<li><strong>优势</strong>：将坐标映射到 3D 环面（Torus）空间，自然地融入了<strong>周期性边界条件（PBC）</strong>，确保生成的结构在数学上符合晶体的无限延伸特性。</li>
+</ul>
+<h3 id="3-bingham-bfn">③ 旋转流形建模：Bingham BFN<a class="headerlink" href="#3-bingham-bfn" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>创新逻辑</strong>：这是本文的技术重难点。建筑块不仅有位置，还有旋转（朝向）。论文将旋转表示为<strong>单位四元数（Unit Quaternions）</strong>，并首次提出了 <strong>Bingham BFN</strong>。</li>
+<li><strong>优势</strong>：Bingham 分布是定义在单位超球面上处理方向数据的理想分布。通过 Bingham BFN，模型能高效地在 4D 单位超球面上生成符合物理约束的旋转取向，解决了 <span class="arithmatex">\(SO(3)\)</span> 空间的建模难题。</li>
+</ul>
+<h2 id="3-theoretical-foundations">3. 理论基础 (Theoretical Foundations)<a class="headerlink" href="#3-theoretical-foundations" title="Permanent link">&para;</a></h2>
+<h3 id="31-mof">3.1 MOF 的表示<a class="headerlink" href="#31-mof" title="Permanent link">&para;</a></h3>
+<h4 id="311">3.1.1 原子的全局表示法<a class="headerlink" href="#311" title="Permanent link">&para;</a></h4>
+<p>在最基础的层面，一个 MOF 晶体可以被看作是三维空间中无限周期的原子排列。为了描述它，我们定义了一个<strong>三元组 <span class="arithmatex">\(M = (L, X, A)\)</span></strong>：</p>
+<ul>
+<li><strong>晶格矩阵 <span class="arithmatex">\(L = [\mathbf{l}_1, \mathbf{l}_2, \mathbf{l}_3] \in \mathbb{R}^{3 \times 3}\)</span></strong>：</li>
+</ul>
+<p>它定义了单胞（Unit Cell）的大小和形状。</p>
+<ul>
+<li><strong>笛卡尔坐标矩阵 <span class="arithmatex">\(X = [\mathbf{x}_i]_{i=1}^N \in \mathbb{R}^{3 \times N}\)</span></strong>：</li>
+</ul>
+<p>存储单胞内 <span class="arithmatex">\(N\)</span> 个原子的绝对空间位置。</p>
+<ul>
+<li><strong>原子类型矩阵 <span class="arithmatex">\(A = [\mathbf{a}_i]_{i=1}^N \in \mathbb{R}^{h \times N}\)</span></strong>：</li>
+</ul>
+<p>通常使用 One-hot 编码表示每个原子的元素种类（如 C, O, Zn 等）。</p>
+<p><strong>周期性公式：</strong></p>
+<p>任何一个原子的位置都可以通过下式表达：<span class="arithmatex">\(\{(a'_i, x'_i) \mid a'_i = a_i,\; x'_i = x_i + L t,\; \forall t \in \mathbb{Z}_3 \times 1 \}\)</span></p>
+<p>这里的 <span class="arithmatex">\(\mathbf{t}\)</span> 是整数向量，代表在三个晶格矢量方向上的偏移。</p>
+<hr />
+<h4 id="312-xi">3.1.2 不变晶格参数 <span class="arithmatex">\(\xi\)</span><a class="headerlink" href="#312-xi" title="Permanent link">&para;</a></h4>
+<p>直接预测矩阵 <span class="arithmatex">\(L\)</span> 往往比较困难，因为它包含旋转成分。为了简化建模，我们通常使用**不变晶格参数：</p>
+<p>$<span class="arithmatex">\(\xi = (a, b, c, \alpha, \beta, \gamma)\)</span>$  其中 <span class="arithmatex">\(a, b, c\)</span> 是边长，<span class="arithmatex">\(\alpha, \beta, \gamma\)</span> 是夹角。</p>
+<p><strong>一种常见的构造方式（将 <span class="arithmatex">\(l_1\)</span> 置于 x 轴）：</strong></p>
+<ol>
+<li><span class="arithmatex">\(l_1 = (a, 0, 0)\)</span></li>
+<li><span class="arithmatex">\(l_2 = (b\cos\gamma, b\sin\gamma, 0)\)</span></li>
+<li><span class="arithmatex">\(l_3 = (c\cos\beta, c\frac{\cos\alpha - \cos\beta\cos\gamma}{\sin\gamma}, c\sqrt{1 - \cos^2\beta - (\frac{\cos\alpha - \cos\beta\cos\gamma}{\sin\gamma})^2})\)</span></li>
+</ol>
+<p>通过这套公式，只要有了 6 个物理参数，就能唯一确定矩阵 <span class="arithmatex">\(L\)</span>。</p>
+<blockquote>
+<p><strong>Trick</strong>：在实际的生成模型（如 Lin 等人的研究）中，为了将这些正值或区间限制的参数映射到全实数空间 <span class="arithmatex">\(\mathbb{R}^6\)</span>，会对长度取 <span class="arithmatex">\(\log\)</span>，对角度取 <span class="arithmatex">\(\tan\)</span> 处理，这样更利于神经网络的收敛。</p>
+</blockquote>
+<hr />
+<h4 id="313">3.1.3 核心：块级层次表示<a class="headerlink" href="#313" title="Permanent link">&para;</a></h4>
+<p>由于 MOF 原子数巨大，直接生成所有原子坐标（<span class="arithmatex">\(N\)</span> 很大）会导致计算量爆炸。研究者提出了“<strong>建筑块（Building Blocks）</strong>”的概念。</p>
+<p>我们将单胞描述为 <span class="arithmatex">\(M_B = (L, X_B, R_B, B)\)</span>，其中：</p>
+<ul>
+<li><strong><span class="arithmatex">\(X_B\)</span> (中心位置)</strong>：每个建筑块（如金属簇或配体）的中心坐标。</li>
+<li><strong><span class="arithmatex">\(R_B \in SO(3)\)</span> (旋转/取向)</strong>：描述建筑块在空间中的朝向。</li>
+<li><strong><span class="arithmatex">\(B\)</span> (本地结构)</strong>：存储每个块自身的原子构成。</li>
+</ul>
+<p>为了让位置信息不受晶格缩放的影响，我们使用分数坐标 <span class="arithmatex">\(F\)</span>：$<span class="arithmatex">\(\mathbf{f}_B = L^{-1}\mathbf{x}_B \in [0, 1)^3\)</span>$</p>
+<p>这样，无论晶格多大，所有块的坐标都被归一化在 <span class="arithmatex">\([0, 1)\)</span> 之间。</p>
+<h5 id="_1">本地结构中原子的表示：<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h5>
+<h6 id="1-mathbfx_r-pca">(1) 局部坐标 <span class="arithmatex">\(\mathbf{x}_r\)</span> 的表示：PCA 规范化<a class="headerlink" href="#1-mathbfx_r-pca" title="Permanent link">&para;</a></h6>
+<p>在建筑块 <span class="arithmatex">\(\mathcal{C}_j\)</span> 内部，原子的位置 <span class="arithmatex">\(\mathbf{x}_r\)</span> 并不是随机分布的，而是采用了一种基于 <strong>主成分分析 (PCA)</strong> 的“规范局部坐标”（Canonical Local Coordinates）。</p>
+<ul>
+<li>
+<p><strong>去中心化</strong>：首先将块内所有原子的原始笛卡尔坐标减去该块的几何中心，使块的中心位于 <span class="arithmatex">\((0,0,0)\)</span> 。</p>
+</li>
+<li>
+<p><strong>对齐标准轴</strong>：通过 PCA 计算原子分布的特征向量矩阵 <span class="arithmatex">\(R\)</span>（即主轴方向）。为了消除镜像对称导致的歧义，会根据块内原子的分布方向（向量 <span class="arithmatex">\(v_j\)</span>）来确定主轴的正负符号 。</p>
+</li>
+<li>
+<p><strong>结果</strong>：最终得到的 <span class="arithmatex">\(\mathbf{x}_r\)</span> 是该建筑块在“标准姿态”下的内部坐标 。这样，同一种类型的建筑块（如某种苯环配体）无论在哪个 MOF 中，其 <span class="arithmatex">\(\mathbf{x}_r\)</span> 的数值都是完全一致的常数 。</p>
+</li>
+</ul>
+<h6 id="2">(2) 确定某个具体原子的全局位置<a class="headerlink" href="#2" title="Permanent link">&para;</a></h6>
+<p>要确定 MOF 晶格中某个原子的具体绝对位置 <span class="arithmatex">\(\mathbf{x}_{global}\)</span>，需要将预测出的各种参数带入以下逻辑：</p>
+<ol>
+<li><strong>确定块中心（分数坐标 <span class="arithmatex">\(\to\)</span> 绝对坐标）</strong>： 模型预测出每个块中心的分数坐标 <span class="arithmatex">\(\mathbf{f}_j \in [0, 1)^3\)</span> 。通过与晶格矩阵 <span class="arithmatex">\(L\)</span> 相乘，将其转回绝对空间位置 ：</li>
+</ol>
+<p>$$
+   \text{块中心绝对位置} = L \mathbf{f}_j
+   $$</p>
+<ol>
+<li>
+<p><strong>应用旋转（四元数 <span class="arithmatex">\(\to\)</span> 旋转矩阵）</strong>： 模型预测出块的取向四元数 <span class="arithmatex">\(q_j\)</span> 。根据公式 (1)，将 <span class="arithmatex">\(q_j\)</span> 转换为 <span class="arithmatex">\(3 \times 3\)</span> 的旋转矩阵 <span class="arithmatex">\(R(q_j)\)</span> 。这个矩阵描述了该块相对于“标准姿态”旋转了多少。</p>
+</li>
+<li>
+<p><strong>合成最终坐标</strong>：</p>
+</li>
+</ol>
+<p>对于块内第 <span class="arithmatex">\(r\)</span> 个原子，其最终位置为：$<span class="arithmatex">\(\mathbf{x}_{global} = L \mathbf{f}_j + R(q_j) \mathbf{x}_r\)</span>$</p>
+<ul>
+<li><span class="arithmatex">\(L \mathbf{f}_j\)</span>：确定块在单胞里的哪儿（由<strong>分数坐标</strong>决定）。</li>
+<li><span class="arithmatex">\(R(q_j) \mathbf{x}_r\)</span>：确定原子相对于块中心摆放在什么位置和角度 。</li>
+</ul>
+<hr />
+<h4 id="32-unit-quaternions">3.2 旋转的数学：单位四元数 (Unit Quaternions)<a class="headerlink" href="#32-unit-quaternions" title="Permanent link">&para;</a></h4>
+<p>描述建筑块的旋转（<span class="arithmatex">\(R_B\)</span>）时，如果使用 <span class="arithmatex">\(3 \times 3\)</span> 矩阵会存在冗余（9个值描述3个自由度）。因此，模型通常采用<strong>单位四元数 <span class="arithmatex">\(q = [w, x, y, z]\)</span></strong>，满足 <span class="arithmatex">\(\|q\| = 1\)</span>。</p>
+<p><strong>从四元数到旋转矩阵的转换公式：</strong></p>
+<div class="arithmatex">\[
+R(q) = \begin{pmatrix} 1 - 2(y^2 + z^2) &amp; 2(xy - wz) &amp; 2(xz + wy) \\ 2(xy + wz) &amp; 1 - 2(x2 + z^2) &amp; 2(yz - wx) \\ 2(xz - wy) &amp; 2(yz + wx) &amp; 1 - 2(x^2 + y^2) \end{pmatrix}
+\]</div>
+<p>这种表示法不仅紧凑，而且能有效避免“万向节死锁”问题，非常适合深度学习中的梯度下降。</p>
+<hr />
+<h4 id="33">3.3 任务定义：生成式建模<a class="headerlink" href="#33" title="Permanent link">&para;</a></h4>
+<p>有了上述表示方法，MOF 的结构预测和生成任务可以转化为对以下概率分布的建模：</p>
+<ol>
+<li><strong>结构预测 (Structure Prediction)</strong>：</li>
+</ol>
+<p>已知块类型 <span class="arithmatex">\(B\)</span>，预测晶格和排列：<span class="arithmatex">\(p(\xi, F, Q | B)\)</span>。</p>
+<ol>
+<li><strong>从头生成 (De novo Generation)</strong>：</li>
+</ol>
+<p>同时生成块类型及其空间排列：<span class="arithmatex">\(p(\xi, F, Q, B)\)</span>。</p>
+<p>​   这种表示法的精妙之处在于<strong>化繁为简</strong>：它将成千上万个原子的坐标问题，简化为了少量建筑块的“位置 (<span class="arithmatex">\(F\)</span>) + 旋转 (<span class="arithmatex">\(Q\)</span>) + 类型 (<span class="arithmatex">\(B\)</span>)”问题，配合不变晶格参数 <span class="arithmatex">\(\xi\)</span>，为大规模 MOF 筛选和 AI 设计奠定了数学基础。</p>
+<h3 id="34-bayesian-flow-networks">3.4 贝叶斯流网络 (Bayesian Flow Networks)<a class="headerlink" href="#34-bayesian-flow-networks" title="Permanent link">&para;</a></h3>
+<p><img alt="image-20260118094048412" src="../assets/image-20260118094048412-1773055970618-1.png" /></p>
+<p>贝叶斯流网络（Bayesian Flow Networks, BFNs）是该论文的核心生成算法。相比于传统的扩散模型（Diffusion Models）直接在数据空间加噪，BFN 的核心哲学是：<strong>在概率分布的参数空间（Parameter Space）进行演化。</strong></p>
+<p>我们可以将 BFN 的原理拆解为“发送者-接收者”博弈模型，通过以下四个关键数学阶段来理解：</p>
+<hr />
+<h4 id="1-sender">1. 发送者（Sender）：产生带噪声的观测<a class="headerlink" href="#1-sender" title="Permanent link">&para;</a></h4>
+<p>发送者知道真实的干净数据 <span class="arithmatex">\(x\)</span>。在每一个步长 <span class="arithmatex">\(i\)</span>，发送者根据预设的精度计划（Accuracy Schedule）<span class="arithmatex">\(\alpha_i\)</span>，对 <span class="arithmatex">\(x\)</span> 进行“模糊化”处理，产生一个观测值 <span class="arithmatex">\(y_i\)</span>。</p>
+<div class="arithmatex">\[
+p_S(y_i|x; \alpha_i)
+\]</div>
+<ul>
+<li><strong>解析</strong>：<span class="arithmatex">\(\alpha_i\)</span> 是<strong>精度计划（Accuracy Schedule）</strong>。在 <span class="arithmatex">\(i=1\)</span> 时精度最低（噪声最大），到 <span class="arithmatex">\(i=T\)</span> 时精度最高。这描述了真相如何被污染成观测值的过程。你可以把它想象成：发送者在给接收者发送一封带有干扰电报，随着时间推移，干扰信号越来越弱。</li>
+</ul>
+<h4 id="2-receiver">2. 接收者（Receiver）：基于贝叶斯的“信念更新”<a class="headerlink" href="#2-receiver" title="Permanent link">&para;</a></h4>
+<ul>
+<li>接收者（Receiver）基于观察到的 <span class="arithmatex">\(y_i\)</span>，不断修正对 <span class="arithmatex">\(x\)</span> 的看法（即更新概率分布的参数）。</li>
+</ul>
+<div class="arithmatex">\[
+p_I(x|\theta_i) \propto p_I(x|\theta_{i-1}) p_S(y_i|x; \alpha_i) \tag{2}
+\]</div>
+<ul>
+<li><strong>解析</strong>：这是一个典型的贝叶斯推断过程：<strong>后验 <span class="arithmatex">\(\propto\)</span> 先验 <span class="arithmatex">\(\times\)</span> 似然</strong>。</li>
+<li><span class="arithmatex">\(p_I(x|\theta_{i-1})\)</span> 是接收者在第 <span class="arithmatex">\(i-1\)</span> 步的“信念”（先验）。</li>
+<li><span class="arithmatex">\(p_S(y_i|x; \alpha_i)\)</span> 是新观察到的证据（似然）。</li>
+<li>更新后的分布由参数 <span class="arithmatex">\(\theta_i\)</span> 参数化。</li>
+</ul>
+<p>​   接收者不知道 <span class="arithmatex">\(x\)</span>，它手里只有一套关于 <span class="arithmatex">\(x\)</span> 可能是什么的“信念”，即<strong>参数 <span class="arithmatex">\(\theta\)</span></strong>。接收者的目标是通过不断收到 <span class="arithmatex">\(y_i\)</span>，利用<strong>贝叶斯定理</strong>来更新自己的信念。</p>
+<div class="arithmatex">\[
+\theta_i = h(\theta_{i-1}, y_i, \alpha_i) \tag{3}
+\]</div>
+<ul>
+<li><strong>公式解析：</strong> </li>
+<li><span class="arithmatex">\(\theta_{i-1}\)</span>：上一时刻我对数据的认知（先验）。</li>
+<li><span class="arithmatex">\(y_i\)</span>：这一时刻我收到的带噪观测。</li>
+<li><span class="arithmatex">\(h\)</span>：<span class="arithmatex">\(h\)</span> 函数定义了参数如何“流动”。它本质上是计算 <span class="arithmatex">\(p(x|\text{所有已观测到的 } y)\)</span>。</li>
+</ul>
+<hr />
+<h4 id="3-bayesian-flow">3. 贝叶斯流（Bayesian Flow）：参数的轨迹<a class="headerlink" href="#3-bayesian-flow" title="Permanent link">&para;</a></h4>
+<ul>
+<li>为了研究参数 <span class="arithmatex">\(\theta_i\)</span> 本身的统计特性，我们需要对所有可能的观测值 <span class="arithmatex">\(y_i\)</span> 进行边缘化（求期望）。</li>
+</ul>
+<div class="arithmatex">\[
+p_U(\theta_i|\theta_{i-1}, x; \alpha_i) = \mathbb{E}_{y_i \sim p_S(y_i|x; \alpha_i)} \delta(\theta_i - h(\theta_{i-1}, y_i, \alpha_i)) \tag{4}
+\]</div>
+<ul>
+<li>
+<p><strong>解析</strong>：<span class="arithmatex">\(\delta\)</span> 是狄拉克 <span class="arithmatex">\(\delta\)</span> 函数。这个公式表示：给定真相 <span class="arithmatex">\(x\)</span> 和上一时刻参数 <span class="arithmatex">\(\theta_{i-1}\)</span>，由于 <span class="arithmatex">\(y_i\)</span> 是随机采样的，那么下一时刻更新出的 <span class="arithmatex">\(\theta_i\)</span> 也是一个随机变量。</p>
+</li>
+<li>
+<p>为了让模型能够训练，我们需要知道在任意时刻 <span class="arithmatex">\(i\)</span>，参数 <span class="arithmatex">\(\theta_i\)</span> 的分布情况。这就是<strong>贝叶斯流分布 <span class="arithmatex">\(p_F\)</span></strong>。</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+p_F(\theta_i|x, [\alpha_j]_{j=1}^i) = \mathbb{E}_{p_U(\theta_1|\theta_0, x; \alpha_1)} \cdots \mathbb{E}_{p_U(\theta_{i-1}|\theta_{i-2}, x; \alpha_{i-1})} p_U(\theta_i|\theta_{i-1}, x; \alpha_i) \tag{5}
+\]</div>
+<ul>
+<li>这个复杂的积分链式公式表达的是：从初始状态 <span class="arithmatex">\(\theta_0\)</span>（完全无知，通常是均匀分布或标准正态分布）开始，经过 <span class="arithmatex">\(i\)</span> 次贝叶斯更新后，参数 <span class="arithmatex">\(\theta\)</span> 演化到了哪里。</li>
+<li><strong>关键点：</strong> 它是一个马尔可夫链的积分累积。在训练阶段，我们不需要真的一步步去迭代更新，通常 <span class="arithmatex">\(p_F(\theta_i|x)\)</span> 存在解析解，可以让我们直接从原始数据 <span class="arithmatex">\(x\)</span> 跳跃式地采样出中间状态 <span class="arithmatex">\(\theta_i\)</span>。</li>
+</ul>
+<h4 id="4">4. 神经网络的角色：模拟发送者<a class="headerlink" href="#4" title="Permanent link">&para;</a></h4>
+<p>在推理（生成）阶段，我们没有真实数据 <span class="arithmatex">\(x\)</span>，所以无法产生 <span class="arithmatex">\(y_i\)</span>。这时神经网络 <span class="arithmatex">\(\phi\)</span> 登场了：</p>
+<div class="arithmatex">\[
+p_O(\hat{x}|\phi(\theta_{i-1}, t_i)) = \delta(\hat{x} - \phi(\theta_{i-1}, t_i)) \tag{6}
+\]</div>
+<ul>
+<li>
+<p><strong>解析</strong>：网络根据当前的认知参数 <span class="arithmatex">\(\theta_{i-1}\)</span> 和时间步 <span class="arithmatex">\(t_i\)</span>，给出一个对原数据的最准确估计 <span class="arithmatex">\(\hat{x}\)</span>。使用 <span class="arithmatex">\(\delta\)</span> 函数意味着模型输出是一个确定的点估计。</p>
+</li>
+<li>
+<p>神经网络查看当前的信念 <span class="arithmatex">\(\theta_{i-1}\)</span>。</p>
+</li>
+<li>它预测出一个“估计的干净数据” <span class="arithmatex">\(\hat{x} = \phi(\theta_{i-1}, t_i)\)</span>。</li>
+<li>我们用这个预测出来的 <span class="arithmatex">\(\hat{x}\)</span> 来替代真实 <span class="arithmatex">\(x\)</span>，模拟出一个接收者分布 <span class="arithmatex">\(p_R\)</span>。</li>
+</ul>
+<div class="arithmatex">\[
+p_R(y_i|\theta_{i-1}; t_i, \alpha_i) = \mathbb{E}_{p_O(\hat{x}|\phi(\theta_{i-1}, t_i))} p_S(y_i|\hat{x}; \alpha_i) \tag{7}
+\]</div>
+<h4 id="5">5. 训练目标：最小化传输损失<a class="headerlink" href="#5" title="Permanent link">&para;</a></h4>
+<p>BFN 的训练不是直接预测噪声，而是最小化<strong>发送者（拥有真相）</strong>和<strong>接收者（模型模拟）</strong>之间的差异。</p>
+<div class="arithmatex">\[
+\mathcal{L}(\phi) = \mathbb{E}_{x \sim p_{data}, i \sim U(1, T)} D_{KL}(p_S(\cdot|x; \alpha_i) \| p_R(\cdot|\theta_{i-1}; t_i, \alpha_i)) \tag{8}
+\]</div>
+<ul>
+<li><strong>直观理解：</strong> </li>
+<li><span class="arithmatex">\(p_S\)</span> 是基于真相产生的真实噪声观测。</li>
+<li><span class="arithmatex">\(p_R\)</span> 是基于模型预测产生的虚拟噪声观测。</li>
+<li>如果模型 <span class="arithmatex">\(\phi\)</span> 预测得足够准（即 <span class="arithmatex">\(\hat{x} \approx x\)</span>），那么这两个分布就会重合，KL 散度趋于 0。（对于连续变量，这个 KL 散度通常会退化为 <strong>MSE（均方误差）</strong> 损失；对于分类变量，它会退化为 <strong>交叉熵</strong> 损失。）</li>
+</ul>
+<hr />
+<h4 id="bfn-vs">总结：BFN vs 扩散模型<a class="headerlink" href="#bfn-vs" title="Permanent link">&para;</a></h4>
+<p>在 MOF 预测任务中，BFN 能够同时处理连续的晶格参数（<span class="arithmatex">\(\xi\)</span>）和离散的块类型（<span class="arithmatex">\(B\)</span>），这就是因为它将所有不同性质的数据都统一到了<strong>参数演化</strong>这一套数学框架下。</p>
+<h2 id="4-mof-bfn">4. MOF-BFN 实现<a class="headerlink" href="#4-mof-bfn" title="Permanent link">&para;</a></h2>
+<p>这一节本质上是在说明：<strong>MOF-BFN 如何在三个不同的流形空间上建立 Bayesian Flow Network：</strong></p>
+<ul>
+<li>晶格参数：连续空间 <span class="arithmatex">\(\mathbb{R}^6\)</span></li>
+<li>分数坐标：环面 <span class="arithmatex">\(T^{3\times K}\)</span></li>
+<li>取向：四元数球面 <span class="arithmatex">\(S^3\)</span></li>
+</ul>
+<p><img src="./assets/image-20260309163634715-1773056014317-3.png" alt="image-20260309163634715" style="zoom:33%;" /></p>
+<h3 id="41">4.1 晶格参数和坐标<a class="headerlink" href="#41" title="Permanent link">&para;</a></h3>
+<h4 id="411-r6-xi">4.1.1 连续空间 <span class="arithmatex">\(R^6\)</span>（晶格参数 <span class="arithmatex">\(\xi\)</span>）<a class="headerlink" href="#411-r6-xi" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><strong>物理意义</strong>：描述晶胞的大小和形状（3条边长 + 3个角度）。</p>
+</li>
+<li>
+<p><strong>数学模型</strong>：使用高斯分布 <span class="arithmatex">\(N(\xi; \mu, \rho^{-1}I)\)</span>。</p>
+</li>
+<li>
+<p>*<em>更新公式 *</em>：
+  $$
+  { \mu_i^\xi, \rho_i^\xi } = \left( \frac{\rho_{i-1}^\xi \mu_{i-1}^\xi + \alpha_i^\xi y_i<sup>\xi}{\rho_{i-1}</sup>\xi + \alpha_i^\xi}, \rho_{i-1}^\xi + \alpha_i^\xi \right)
+  $$</p>
+</li>
+<li>
+<p><strong>理解</strong>：这本质上是<strong>加权平均</strong>。新的均值 <span class="arithmatex">\(\mu_i\)</span> 是旧均值和新观测值 <span class="arithmatex">\(y_i\)</span> 的组合，权重取决于精度 <span class="arithmatex">\(\rho\)</span>（精度的倒数是方差）。</p>
+</li>
+</ul>
+<p>$$
+  \mathcal{L}<em _mu__i-1="\mu_{i-1" i_="i,">\xi = \mathbb{E}</em>^M, i)|^2_2 \right]
+  $$}} \left[ \frac{\alpha_i^\xi T}{2} |\xi - \phi_\xi(\theta_{i-1</p>
+<ul>
+<li>*<em>训练目标 *</em>：最小化预测值 <span class="arithmatex">\(\phi_\xi\)</span> 与真实值 <span class="arithmatex">\(\xi\)</span> 之间的均方误差（MSE）。</li>
+</ul>
+<h4 id="412-t3-times-k-f">4.1.2 环面空间 <span class="arithmatex">\(T^{3 \times K}\)</span>（分数坐标 <span class="arithmatex">\(F\)</span>）<a class="headerlink" href="#412-t3-times-k-f" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>物理意义</strong>：原子在晶胞内的相对位置（0到1之间循环）。</li>
+<li><strong>数学模型</strong>：使用 <strong>von Mises 分布</strong>（类似于圆周上的高斯分布）。</li>
+<li><strong>更新公式 (Eq. 12)</strong>：</li>
+</ul>
+<div class="arithmatex">\[
+c_i^F = c_{i-1}^F + \alpha_i^F e^{j 2\pi y_i^F}
+\]</div>
+<p>使用复数形式 <span class="arithmatex">\(c_i = \kappa e^{i 2\pi m}\)</span> 来处理周期性，通过累加复数向量来更新分布的中心和集中度。</p>
+<hr />
+<h3 id="42-bingham-bfn">4.2 针对四元数生成的 Bingham BFN<a class="headerlink" href="#42-bingham-bfn" title="Permanent link">&para;</a></h3>
+<p>这是本文的创新点，解决了旋转对称性问题。</p>
+<h3 id="bingham-eq-15">Bingham 分布 (Eq. 15)<a class="headerlink" href="#bingham-eq-15" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[
+p_B(q; M, \Lambda) = \frac{1}{Z(\Lambda)} \exp(q^\top M^\top \Lambda M q)
+\]</div>
+<ul>
+<li><strong>核心逻辑</strong>：旋转空间具有<strong>对映对称性（Antipodal Symmetry）</strong>，即四元数 <span class="arithmatex">\(q\)</span> 和 <span class="arithmatex">\(-q\)</span> 表示同一个旋转。Bingham 分布天然符合这一特性。</li>
+<li><strong>参数含义</strong>：<span class="arithmatex">\(M\)</span> 是特征向量（决定旋转方向），<span class="arithmatex">\(\Lambda\)</span> 是特征值（决定分布在该方向上的集中程度）。</li>
+</ul>
+<h3 id="_2">贝叶斯更新<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>文中引入了 <strong>Watson 分布</strong> 作为共轭先验。</p>
+<ul>
+<li><strong>公式推导</strong>：将 Bingham 的指数项与 Watson 的似然项相乘，结果仍然是一个 Bingham 分布。</li>
+<li><strong>更新规则 (Eq. 20)</strong>：通过对“旧参数矩阵 + 新观测值的特征矩阵”进行<strong>特征值分解（EigenDecomposition）</strong>来获取更新后的 <span class="arithmatex">\(M_i\)</span> 和 <span class="arithmatex">\(\Lambda_i\)</span>。</li>
+</ul>
+<h3 id="_3">训练目标<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[
+L_q = E [ \dots (1 - (q^\top \phi_q)^2) ]
+\]</div>
+<ul>
+<li><strong>直观理解</strong>：<span class="arithmatex">\(q^\top \phi_q\)</span> 是两个单位四元数的余弦相似度。平方项确保了无论预测的是 <span class="arithmatex">\(q\)</span> 还是 <span class="arithmatex">\(-q\)</span>，只要方向一致，损失就小。</li>
+</ul>
+<hr />
+<h3 id="43">4.3 训练方案与损失设计<a class="headerlink" href="#43" title="Permanent link">&para;</a></h3>
+<h4 id="431">4.3.1 合损失函数<a class="headerlink" href="#431" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">\[
+\mathcal{L}_{SP} = \gamma_\xi \mathcal{L}_\xi + \gamma_F \mathcal{L}_F + \gamma_q \mathcal{L}_q
+\]</div>
+<ul>
+<li><strong>解读</strong>：通过超参数 <span class="arithmatex">\(\gamma\)</span> 平衡三个流形的学习速率。</li>
+</ul>
+<h4 id="432">4.3.2 扩展到生成任务<a class="headerlink" href="#432" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">\[
+\mathcal{L}_{DNG} = \gamma_\xi \mathcal{L}_\xi + \gamma_F \mathcal{L}_F + \gamma_q \mathcal{L}_q + \gamma_B \mathcal{L}_B
+\]</div>
+<ul>
+<li><strong>解读</strong>：加入了 <span class="arithmatex">\(\mathcal{L}_B\)</span>，即对建筑单元（Building Block）身份的学习，使其具备生成全新 MOF 的能力。</li>
+</ul>
+<h4 id="433-backbone">4.3.3 模型骨干 (Backbone)<a class="headerlink" href="#433-backbone" title="Permanent link">&para;</a></h4>
+<ul>
+<li>使用 <strong>EGNN (E(n) Equivariant Graph Neural Networks)</strong> 作为编码器，处理建筑单元（Building Blocks）的局部结构。</li>
+<li>预测器不仅输入时间步 <span class="arithmatex">\(t\)</span> 和参数 <span class="arithmatex">\(\theta\)</span>，还输入了<strong>精度项 (<span class="arithmatex">\(\kappa, \lambda\)</span>)</strong>。这非常关键，因为精度告诉模型当前预测的不确定性有多少。</li>
+</ul>
+<h2 id="5-experiments">5. 实验结果 (Experiments)<a class="headerlink" href="#5-experiments" title="Permanent link">&para;</a></h2>
+<h3 id="1-structure-prediction">1. 结构预测精度 (Structure Prediction)<a class="headerlink" href="#1-structure-prediction" title="Permanent link">&para;</a></h3>
+<p>MOF-BFN 在将建筑单元（Building Blocks）组装回原始 MOF 结构的测试中表现出色。</p>
+<ul>
+<li><strong>显著超越基线</strong>：相比于传统的随机搜索（RS）、进化算法（EA）以及全原子模型（DiffCSP），MOF-BFN 展现了压倒性的优势。</li>
+<li><strong>对比 MOFFlow</strong>：在最严格的匹配标准（stol=0.5）下，生成 5 个样本时，MOF-BFN 的匹配率（MR）从 <strong>44.75% 提升至 53.51%</strong>，且均方根误差（RMSE）显著降低。</li>
+<li><strong>结论</strong>：块级（Block-level）建模结合 BFN 框架，能更高效地在大尺度搜索空间中定位正确结构。</li>
+</ul>
+<p><img alt="image-20260309173250376" src="../assets/image-20260309173250376.png" /></p>
+<hr />
+<h3 id="2-geometric-property">2. 几何与物理性质评估 (Geometric Property)<a class="headerlink" href="#2-geometric-property" title="Permanent link">&para;</a></h3>
+<p>模型不仅要“形似”，更要“神似”。研究者评估了与气体存储和分离相关的 8 项关键物理指标（如表面积 VSA/GSA、孔径 PLD/LCD、孔隙率 VF 等）。</p>
+<ul>
+<li><strong>误差最低</strong>：如表 2 所示，MOF-BFN 在所有 8 项指标上的 RMSE 均为最低。</li>
+<li><strong>结论</strong>：这证明了该模型预测的结构在<strong>空间特性</strong>上与真实材料高度一致，具备实际工程应用（如模拟气体吸附）的潜力。</li>
+</ul>
+<p><img alt="image-20260309173300484" src="../assets/image-20260309173300484.png" /></p>
+<hr />
+<h3 id="3-de-novo-generation">3. 从头生成能力 (De Novo Generation)<a class="headerlink" href="#3-de-novo-generation" title="Permanent link">&para;</a></h3>
+<p>在没有任何已知拓扑结构的前提下，模型直接生成全新的 MOF。</p>
+<ul>
+<li><strong>拓扑一致性</strong>：在连接点匹配（Connection Point Matching）测试中，MOF-BFN 达到了 <strong>92.3%</strong> 的成功率，远高于 MOFDiff 的 72.3%，说明其组装逻辑更符合拓扑学原理。</li>
+<li><strong>化学合理性</strong>：通过 <code>MOFChecker</code> 工具进行全方位检查（包括原子重叠、配位状态、电荷等），MOF-BFN 的综合合格率（Total Valid）是 MOFDiff 的 <strong>3 倍以上</strong>（0.323 vs 0.107）。</li>
+<li><strong>结论</strong>：MOF-BFN 生成的材料在化学上更“健康”，更具有合成可能性。</li>
+</ul>
+<p><img alt="image-20260309173316023" src="../assets/image-20260309173316023.png" /></p>
+<hr />
+<h3 id="4-analyses">4. 消融实验分析 (Analyses)<a class="headerlink" href="#4-analyses" title="Permanent link">&para;</a></h3>
+<p>为了明确进步的来源，研究者将 MOF-BFN 与中间变体 <code>MOF-FracFlow</code>（仅引入分数坐标的流匹配模型）进行了对比：</p>
+<ul>
+<li><strong>周期性的重要性</strong>：改用<strong>分数坐标（Fractional Coordinates）</strong>后，即使不改变算法架构，性能也有所提升，说明捕捉晶格周期性是关键。</li>
+<li><strong>BFN 框架的优越性</strong>：在同等条件下，<strong>BFN 框架</strong>持续优于流匹配（Flow Matching）框架。特别是在引入了 <span class="arithmatex">\(SO(3)\)</span> 流形（旋转空间）的生成目标后，BFN 处理复杂流形的能力得到了进一步证实。</li>
+</ul>
+<p><img src="./assets/image-20260309173407268.png" alt="image-20260309173407268" style="zoom: 50%;" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
